@@ -50,16 +50,11 @@ class Lever
 	
 	def draw
 		
-		color = 0xffffffff
-		blue = [color%256, 0].max
-		green = [(color/256)%256 - (255*@value).round, 0].max
-		red = [(color/65536)%256, 0].max
-		alpha = [(color/16777216)%256, 0].max
-		
-		color_new = alpha*16777216 +
-							[[red, 0].max, 255].min*65536 +
-							[[green, 0].max, 255].min*256 +
-							[[blue, 0].max, 255].min
+		if @value == 0
+			color_new = $off_color
+		else
+			color_new = $on_color
+		end
 		
 		col = 0xff777777
 		

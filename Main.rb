@@ -28,6 +28,10 @@ class GameWindow < Gosu::Window
 		$camera_y = $window_height/2
 		$camera_zoom = 1.0
 		
+		## The colors used in the circuits
+		$off_color = 0xffffffff  ## White
+		$on_color = 0xffff00ff   ## Purple
+		
 		@circle_img = Gosu::Image.new(self, "media/dot_img.png", true)
 		
 		@font = Gosu::Font.new(self, Gosu::default_font_name, 17)
@@ -167,6 +171,15 @@ class GameWindow < Gosu::Window
 		$links.delete(nil)
 	end
 	
+	def destroy_levers(id)
+		$levers.each_with_index   { |inst, i|  
+		if inst.id == id
+			$levers[i] = nil
+		end
+		}
+		$levers.delete(nil)
+	end
+	
 	def destroy_node(id)
 		@node_ids.delete(id.id) ## makes sense
 		$nodes.delete(id)
@@ -296,7 +309,21 @@ class GameWindow < Gosu::Window
 								repeater_output = inst
 								
 								if @cursor_input.id != repeater_output.id
-									self.create_link(@cursor_input.id, repeater_output.id, @cursor)
+									
+									already_linked = false
+									
+									$links.each_with_index   { |inst, i|  
+									if inst.input_id == @cursor_input.id and inst.output_id == repeater_output.id
+										
+										already_linked = true
+										
+									end
+									}
+									
+									if already_linked == false
+										self.create_link(@cursor_input.id, repeater_output.id, @cursor)
+										puts "Link created"
+									end
 								end
 								
 								@cursor_input = false
@@ -307,6 +334,8 @@ class GameWindow < Gosu::Window
 						
 					elsif @cursor == "lever"
 						if @cursor_input == false
+							
+							
 							
 							ary = []
 							dists = []
@@ -327,9 +356,26 @@ class GameWindow < Gosu::Window
 							end
 							
 						else
-							x = ((mouse_x-$window_width/2)/$camera_zoom+$camera_x).round
-							y = ((mouse_y-$window_height/2)/$camera_zoom+$camera_y).round
-							self.create_lever(x, y, @cursor_input.id, 7, 0)
+							
+							if @toggle_grid == false
+								
+								x = ((mouse_x-$window_width/2)/$camera_zoom+$camera_x).round
+								y = ((mouse_y-$window_height/2)/$camera_zoom+$camera_y).round
+								
+								self.create_lever(x, y, @cursor_input.id, 7, 0)
+								
+							else
+								
+								m_real_x = ((mouse_x-@grid_size*$camera_zoom/2)-$window_width/2)/$camera_zoom+$camera_x
+								m_real_y = ((mouse_y-@grid_size*$camera_zoom/2)-$window_height/2)/$camera_zoom+$camera_y
+								
+								grid_x = (m_real_x*1.0/@grid_size).ceil*@grid_size
+								grid_y = (m_real_y*1.0/@grid_size).ceil*@grid_size
+								
+								self.create_lever(grid_x, grid_y, @cursor_input.id, 7, 0)
+								
+							end
+							
 							@cursor_input = false
 						end
 					else
@@ -485,10 +531,10 @@ class GameWindow < Gosu::Window
 				grid_x = (m_real_x*1.0/@grid_size).ceil*@grid_size
 				grid_y = (m_real_y*1.0/@grid_size).ceil*@grid_size
 				
-				@circle_img.draw_rot(grid_x*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, grid_y*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, 5, 0, 0.5, 0.5, 1.0, 1.0, 0xff00ff00)
+				@circle_img.draw_rot(grid_x*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, grid_y*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, 5, 0, 0.5, 0.5, 1.0*$camera_zoom, 1.0*$camera_zoom, 0xff00ff00)
 				
 			else
-				@circle_img.draw_rot(mouse_x, mouse_y, 5, 0, 0.5, 0.5, 1.0, 1.0, 0xff00ff00)
+				@circle_img.draw_rot(mouse_x, mouse_y, 5, 0, 0.5, 0.5, 1.0*$camera_zoom, 1.0*$camera_zoom, 0xff00ff00)
 			end
 		end
 		
@@ -572,7 +618,39 @@ class GameWindow < Gosu::Window
 			if @cursor_input == false
 				## Do nothing
 			else
-				self.draw_line(@cursor_input.x*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, @cursor_input.y*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, 0xffffffff, mouse_x, mouse_y, 0xffffffff, 5)
+				
+				if @toggle_grid == true
+					
+					m_real_x = ((mouse_x-@grid_size*$camera_zoom/2)-$window_width/2)/$camera_zoom+$camera_x
+					m_real_y = ((mouse_y-@grid_size*$camera_zoom/2)-$window_height/2)/$camera_zoom+$camera_y
+					
+					grid_x = (m_real_x*1.0/@grid_size).ceil*@grid_size
+					grid_y = (m_real_y*1.0/@grid_size).ceil*@grid_size
+					
+					mid_x = grid_x*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom
+					mid_y = grid_y*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom
+					
+					x1 = mid_x-7*$camera_zoom
+					y1 = mid_y-7*$camera_zoom
+					x2 = mid_x+7*$camera_zoom
+					y2 = mid_y+7*$camera_zoom
+					
+					self.draw_quad(x1, y1, 0xff00ff00, x2, y1, 0xff00ff00, x2, y2, 0xff00ff00, x1, y2, 0xff00ff00, 5)
+					self.draw_line(@cursor_input.x*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, @cursor_input.y*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, 0xffffffff, mid_x, mid_y, 0xffffffff, 5)
+				
+				else
+					mid_x = mouse_x
+					mid_y = mouse_y
+					
+					x1 = mid_x-7*$camera_zoom
+					y1 = mid_y-7*$camera_zoom
+					x2 = mid_x+7*$camera_zoom
+					y2 = mid_y+7*$camera_zoom
+					
+					self.draw_quad(x1, y1, 0xff00ff00, x2, y1, 0xff00ff00, x2, y2, 0xff00ff00, x1, y2, 0xff00ff00, 5)
+					self.draw_line(@cursor_input.x*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, @cursor_input.y*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, 0xffffffff, mid_x, mid_y, 0xffffffff, 5)
+				end
+				
 			end
 		end
 		
