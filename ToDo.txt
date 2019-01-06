@@ -1,0 +1,14 @@
+
+--- Zoom/camera                                          ### DONE!
+--- Saving and loading from txt file                     ### DONE!
+--- Ingame editor                                        ### DONE!
+--- Gridlines                                            ### DONE!
+--- AND, NAND, XOR gates for proof of concept            ### DONE!
+--- 4 bit binary decoder                                 ### DONE!
+--- memory circuit                                       ### DONE!
+--- 8 bit memory
+--- T-Flip-Flip
+--- Copy Pasting
+--- Optimisation
+--- Bug-fixing
+--- User manual

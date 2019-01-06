@@ -1,0 +1,294 @@
+node 200 200 0 0
+node 240 200 0 1
+node 280 200 0 2
+node 320 200 0 3
+node 360 200 0 4
+node 400 200 0 5
+node 440 200 0 6
+node 480 200 0 7
+node 520 200 0 8
+node 560 200 0 9
+node 600 300 0 11
+node 560 300 0 12
+node 520 300 0 13
+node 480 300 0 14
+node 440 300 0 15
+node 400 300 0 16
+node 360 300 0 17
+node 320 300 0 18
+node 280 300 0 19
+node 240 300 0 20
+node 200 300 0 21
+node 240 100 0 22
+node 280 100 0 23
+node 320 100 0 24
+node 360 100 0 25
+node 200 400 1 26
+node 240 400 1 27
+node 280 400 0 28
+node 320 400 0 29
+node 450 400 1 30
+node 490 400 0 31
+node 300 -80 0 32
+node 300 -40 1 33
+node 300 0 0 34
+node 340 -40 0 35
+node 480 -80 0 36
+node 480 0 0 37
+node 520 -40 1 38
+node 300 -160 1 39
+node 300 -240 1 40
+node 380 -200 0 42
+node 340 -240 1 41
+node 340 -160 1 43
+node 340 -200 1 45
+node 300 -200 0 44
+node 300 -420 1 46
+node 300 -380 1 47
+node 360 -400 0 48
+node 340 -340 1 49
+node 240 -400 0 51
+node 240 -360 0 52
+node 380 -360 1 50
+node 420 -360 0 53
+node 580 -240 0 54
+node 620 -240 0 55
+node 660 -240 0 56
+node 700 -240 0 57
+node 740 -280 0 58
+node 740 -320 1 59
+node 740 -360 1 60
+node 740 -400 1 61
+node 740 -440 1 62
+node 740 -480 1 63
+node 740 -520 1 64
+node 740 -560 1 65
+node 740 -600 1 66
+node 740 -640 1 67
+node 740 -680 1 68
+node 740 -720 1 69
+node 740 -760 1 70
+node 740 -800 1 71
+node 740 -840 1 72
+node 740 -880 1 73
+node 780 -280 1 74
+node 780 -320 0 75
+node 780 -360 0 76
+node 780 -400 0 77
+node 780 -440 0 78
+node 780 -480 0 79
+node 780 -520 0 80
+node 780 -560 0 81
+node 780 -600 0 82
+node 780 -640 0 83
+node 780 -680 0 84
+node 780 -720 0 85
+node 780 -760 0 86
+node 780 -800 0 87
+node 780 -840 0 88
+node 780 -880 0 89
+node 780 -40 0 90
+node 820 -40 0 91
+node 820 0 1 93
+node 860 0 0 94
+node 600 200 0 10
+node 900 0 0 92
+node 940 0 0 95
+node 980 0 0 96
+node 1020 0 0 97
+node 1060 0 0 98
+node 1100 0 0 99
+node 820 400 0 100
+node 860 400 1 101
+node 1000 240 1 103
+node 1040 240 0 104
+node 1040 180 1 107
+node 1000 180 1 108
+node 820 440 1 102
+node 860 440 1 109
+node 820 480 0 110
+node 860 480 0 111
+node 820 360 0 112
+node 1000 120 0 105
+node 1040 120 0 106
+link 0 1 repeater
+link 1 2 repeater
+link 2 3 repeater
+link 3 4 repeater
+link 4 5 repeater
+link 5 6 repeater
+link 6 7 repeater
+link 7 8 repeater
+link 8 9 repeater
+link 11 12 repeater
+link 12 13 repeater
+link 13 14 repeater
+link 14 15 repeater
+link 15 16 repeater
+link 16 17 repeater
+link 17 18 repeater
+link 18 19 repeater
+link 19 20 repeater
+link 20 21 repeater
+link 21 0 repeater
+link 1 22 repeater
+link 22 23 repeater
+link 23 24 repeater
+link 24 25 repeater
+link 25 4 repeater
+link 26 27 repeater
+link 27 28 inverter
+link 28 29 repeater
+link 30 31 inverter
+link 31 30 inverter
+link 32 33 inverter
+link 34 33 inverter
+link 33 35 inverter
+link 36 38 inverter
+link 37 38 inverter
+link 40 41 inverter
+link 41 42 inverter
+link 39 43 inverter
+link 43 42 inverter
+link 40 44 inverter
+link 39 44 inverter
+link 44 45 inverter
+link 45 41 repeater
+link 45 43 repeater
+link 52 49 inverter
+link 51 49 inverter
+link 52 47 inverter
+link 51 46 inverter
+link 46 48 inverter
+link 47 48 inverter
+link 48 50 inverter
+link 49 50 inverter
+link 50 53 inverter
+link 58 74 inverter
+link 59 75 inverter
+link 60 76 inverter
+link 61 77 inverter
+link 62 78 inverter
+link 63 79 inverter
+link 64 80 inverter
+link 65 81 inverter
+link 66 82 inverter
+link 67 83 inverter
+link 68 84 inverter
+link 69 85 inverter
+link 70 86 inverter
+link 71 87 inverter
+link 72 88 inverter
+link 73 89 inverter
+link 57 58 repeater
+link 56 58 repeater
+link 55 58 repeater
+link 54 58 repeater
+link 57 59 inverter
+link 57 61 inverter
+link 57 63 inverter
+link 57 65 inverter
+link 57 67 inverter
+link 57 69 inverter
+link 57 71 inverter
+link 57 73 inverter
+link 57 60 repeater
+link 57 62 repeater
+link 57 64 repeater
+link 57 66 repeater
+link 57 68 repeater
+link 57 70 repeater
+link 57 72 repeater
+link 56 59 repeater
+link 56 60 inverter
+link 56 61 inverter
+link 56 64 inverter
+link 56 65 inverter
+link 56 68 inverter
+link 56 69 inverter
+link 56 72 inverter
+link 56 73 inverter
+link 56 62 repeater
+link 56 63 repeater
+link 56 66 repeater
+link 56 67 repeater
+link 56 70 repeater
+link 56 71 repeater
+link 55 59 repeater
+link 55 60 repeater
+link 55 61 repeater
+link 55 66 repeater
+link 55 67 repeater
+link 55 68 repeater
+link 55 69 repeater
+link 55 62 inverter
+link 55 63 inverter
+link 55 64 inverter
+link 55 65 inverter
+link 55 73 inverter
+link 55 72 inverter
+link 55 71 inverter
+link 55 70 inverter
+link 54 59 repeater
+link 54 60 repeater
+link 54 61 repeater
+link 54 62 repeater
+link 54 63 repeater
+link 54 64 repeater
+link 54 65 repeater
+link 54 66 inverter
+link 54 67 inverter
+link 54 68 inverter
+link 54 69 inverter
+link 54 70 inverter
+link 54 71 inverter
+link 54 72 inverter
+link 54 73 inverter
+link 90 93 inverter
+link 90 91 repeater
+link 91 93 repeater
+link 93 94 inverter
+link 9 10 repeater
+link 10 11 repeater
+link 94 92 repeater
+link 92 95 repeater
+link 95 96 repeater
+link 96 97 repeater
+link 97 98 repeater
+link 98 99 repeater
+link 100 101 inverter
+link 101 100 inverter
+link 104 107 inverter
+link 103 107 repeater
+link 104 108 inverter
+link 103 108 inverter
+link 110 109 repeater
+link 111 109 inverter
+link 110 102 inverter
+link 111 102 inverter
+link 109 101 inverter
+link 102 100 inverter
+link 100 112 repeater
+link 108 105 inverter
+link 107 106 inverter
+lever 100 200 0 10 0
+lever 100 400 26 10 1
+lever 450 450 30 7 0
+lever 490 450 31 7 0
+lever 237 -77 32 7 0
+lever 240 -1 34 7 0
+lever 437 -82 36 7 0
+lever 435 2 37 7 0
+lever 243 -237 40 7 1
+lever 241 -159 39 7 1
+lever 182 -401 51 7 0
+lever 179 -359 52 7 0
+lever 699 -195 57 7 0
+lever 659 -193 56 7 0
+lever 620 -195 55 7 0
+lever 580 -193 54 7 0
+lever 737 -40 90 7 0
+lever 1001 286 103 7 1
+lever 1039 282 104 7 0
+lever 860 522 111 7 0
+lever 820 522 110 7 0
