@@ -5,8 +5,7 @@ Simple circuit simulator written in Ruby. The program was made with the intentio
 The project began the 4'th January 2019.  
 
 # Screenshots
-testing
-![ScreenShot](https://raw.github.com/Makkiftw/Signal-test/master/(screenshot)_8bit_memory.png)
+![screenshot _8bit_memory](https://user-images.githubusercontent.com/8478043/50781436-ab0a6600-12a5-11e9-815c-046782816b4e.PNG)
 
 # Launch
 There is no .exe file attached yet.
