@@ -4,6 +4,9 @@
 Simple circuit simulator written in Ruby. The program was made with the intention of designing circuits and combining them to eventually simulate complex machines like adders, CPUs and perhaps entire computers. 
 The project began the 4'th January 2019.  
 
+# Screenshots
+
+
 # Launch
 There is no .exe file attached yet.
 The program is launched by opening "Main.rb" with ruby.
