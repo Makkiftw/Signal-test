@@ -5,7 +5,7 @@ Simple circuit simulator written in Ruby. The program was made with the intentio
 The project began the 4'th January 2019.  
 
 # Screenshots
-
+testing
 
 # Launch
 There is no .exe file attached yet.
