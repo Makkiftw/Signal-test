@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'gosu'
+require 'ruby-prof'
 
 include Gosu
 
@@ -7,6 +8,9 @@ require_relative 'Node.rb'
 require_relative 'Link.rb'
 require_relative 'Lever.rb'
 require_relative 'Textflash.rb'
+
+# ## Profile the code
+# RubyProf.start
 
 class GameWindow < Gosu::Window
 	
@@ -65,7 +69,7 @@ class GameWindow < Gosu::Window
 			end
 		end
 		
-		@update_delay_max = 5
+		@update_delay_max = 2
 		@update_delay = @update_delay_max
 		
 		@cursor = false
@@ -94,10 +98,10 @@ class GameWindow < Gosu::Window
 			$camera_x += 5 / $camera_zoom
 		end
 		if button_down? Gosu::KbQ
-			$camera_zoom = $camera_zoom * 0.98
+			$camera_zoom = [$camera_zoom * 0.98, 0.4].max
 		end
 		if button_down? Gosu::KbE
-			$camera_zoom = $camera_zoom / 0.98
+			$camera_zoom = [$camera_zoom / 0.98, 3.0].min
 		end
 		if button_down? Gosu::MsRight
 			ary = []
@@ -195,6 +199,7 @@ class GameWindow < Gosu::Window
 	def destroy_links(id)
 		$links.each_with_index   { |inst, i|  
 		if inst.input_id == id or inst.output_id == id
+			$links[i].remove_node_link
 			$links[i] = nil
 		end
 		}
@@ -257,14 +262,18 @@ class GameWindow < Gosu::Window
 		end
 		
 		for i in 0..$levers.length-1
-			if self.point_in_rectangle($levers[i].x, $levers[i].y, sel_x1, sel_y1, sel_x2, sel_y2) and node_ids.include?($levers[i].id)
-				copy_levers << $levers[i]
+			if self.point_in_rectangle($levers[i].x, $levers[i].y, sel_x1, sel_y1, sel_x2, sel_y2) 
+				if node_ids.include?($levers[i].id)
+					copy_levers << $levers[i]
+				end
 			end
 		end
 		
 		for i in 0..$links.length-1
-			if node_ids.include?($links[i].input_id) and node_ids.include?($links[i].output_id)
-				copy_links << $links[i]
+			if node_ids.include?($links[i].input_id) 
+				if node_ids.include?($links[i].output_id)
+					copy_links << $links[i]
+				end
 			end
 		end
 		
@@ -324,16 +333,17 @@ class GameWindow < Gosu::Window
 			## @copy_data includes no instances, making it light and convenient to use, even if the instances the data represent gets deleted!
 			@copy_data = [[mid_x, mid_y], data_nodes, node_ids, data_levers, data_links]
 			@cursor = false
-			p @copy_data
 			
-			puts "mid_x: #{mid_x}"
-			puts "mid_y: #{mid_y}"
+			# p @copy_data
+			
+			# puts "mid_x: #{mid_x}"
+			# puts "mid_y: #{mid_y}"
 			
 			gridmid_x = (mid_x-@grid_size/2) % @grid_size
 			gridmid_y = (mid_y-@grid_size/2) % @grid_size
 			
-			puts "gridmid_x: #{gridmid_x}"
-			puts "gridmid_y: #{gridmid_y}"
+			# puts "gridmid_x: #{gridmid_x}"
+			# puts "gridmid_y: #{gridmid_y}"
 			
 		end
 		
@@ -709,6 +719,9 @@ class GameWindow < Gosu::Window
 		$textflash.each { |inst|  inst.draw }
 		
 		@font.draw("@update_delay: #{@update_delay}", $window_width-150, 10, 1, 1.0, 1.0, 0xffffffff)
+		@font.draw("Nodes: #{$nodes.length}", $window_width-150, 30, 1, 1.0, 1.0, 0xffffffff)
+		@font.draw("Links: #{$links.length}", $window_width-150, 50, 1, 1.0, 1.0, 0xffffffff)
+		@font.draw("Levers: #{$levers.length}", $window_width-150, 70, 1, 1.0, 1.0, 0xffffffff)
 		
 		## Save button
 		if point_in_rectangle(mouse_x, mouse_y, 7, 7, 69, 39)
@@ -1132,3 +1145,10 @@ end
 # show the window
 window = GameWindow.new
 window.show
+
+# ## Stop the profiling
+# result = RubyProf.stop
+
+# # print a flat profile to text
+# printer = RubyProf::FlatPrinter.new(result)
+# printer.print(STDOUT)

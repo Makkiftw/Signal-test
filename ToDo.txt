@@ -6,9 +6,10 @@
 --- AND, NAND, XOR gates for proof of concept            ### DONE!
 --- 4 bit binary decoder                                 ### DONE!
 --- memory circuit                                       ### DONE!
---- 8 bit memory
---- T-Flip-Flip
+--- 8 bit memory                                         ### DONE!
+--- T-Flip-Flip                                          ### DONE!
 --- Copy Pasting                                         ### DONE!
---- Optimisation
+--- Optimisation                                         ### DONE! (roughly)
 --- Bug-fixing
 --- User manual
+--- Hotkeys

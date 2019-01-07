@@ -36,13 +36,13 @@ node 340 -40 0 35
 node 480 -80 0 36
 node 480 0 0 37
 node 520 -40 1 38
-node 300 -160 1 39
-node 300 -240 1 40
+node 300 -160 0 39
+node 300 -240 0 40
 node 380 -200 0 42
 node 340 -240 1 41
 node 340 -160 1 43
-node 340 -200 1 45
-node 300 -200 0 44
+node 340 -200 0 45
+node 300 -200 1 44
 node 300 -420 1 46
 node 300 -380 1 47
 node 360 -400 0 48
@@ -88,7 +88,6 @@ node 780 -800 0 87
 node 780 -840 0 88
 node 780 -880 0 89
 node 780 -40 0 90
-node 820 -40 0 91
 node 820 0 1 93
 node 860 0 0 94
 node 600 200 0 10
@@ -100,17 +99,796 @@ node 1060 0 0 98
 node 1100 0 0 99
 node 820 400 0 100
 node 860 400 1 101
-node 1000 240 1 103
-node 1040 240 0 104
-node 1040 180 1 107
-node 1000 180 1 108
 node 820 440 1 102
 node 860 440 1 109
 node 820 480 0 110
 node 860 480 0 111
 node 820 360 0 112
-node 1000 120 0 105
-node 1040 120 0 106
+node 900 400 1 113
+node 940 400 0 114
+node 900 440 1 115
+node 940 440 1 116
+node 900 480 0 117
+node 940 480 0 118
+node 900 360 1 119
+node 980 400 1 120
+node 1020 400 0 121
+node 980 440 1 122
+node 1020 440 1 123
+node 980 480 0 124
+node 1020 480 0 125
+node 980 360 1 126
+node 1060 400 1 127
+node 1100 400 0 128
+node 1060 440 1 129
+node 1100 440 1 130
+node 1060 480 0 131
+node 1100 480 0 132
+node 1060 360 1 133
+node 1140 400 0 134
+node 1180 400 1 135
+node 1140 440 1 136
+node 1180 440 1 137
+node 1140 480 0 138
+node 1180 480 0 139
+node 1140 360 0 140
+node 1220 400 1 141
+node 1260 400 0 142
+node 1220 440 1 143
+node 1260 440 1 144
+node 1220 480 0 145
+node 1260 480 0 146
+node 1220 360 1 147
+node 1300 400 1 148
+node 1340 400 0 149
+node 1300 440 1 150
+node 1340 440 1 151
+node 1300 480 0 152
+node 1340 480 0 153
+node 1300 360 1 154
+node 1380 400 0 155
+node 1420 400 1 156
+node 1380 440 1 157
+node 1420 440 1 158
+node 1380 480 0 159
+node 1420 480 0 160
+node 1380 360 0 161
+node 780 520 0 162
+node 280 600 1 163
+node 320 600 0 164
+node 320 540 1 165
+node 280 540 1 166
+node 280 480 0 167
+node 320 480 0 168
+node 980 140 1 103
+node 1000 240 0 105
+node 980 180 1 107
+node 980 100 1 108
+node 1100 160 0 169
+node 1020 140 0 104
+node 1020 180 1 106
+node 780 -80 0 91
+node 820 -40 0 170
+node 1340 20 0 171
+node 1360 20 0 172
+node 1360 40 0 173
+node 1340 40 0 174
+node 1350 30 0 175
+node 1380 20 0 176
+node 1400 20 0 177
+node 1400 40 0 178
+node 1380 40 0 179
+node 1390 30 0 180
+node 1340 -20 0 181
+node 1360 -20 0 182
+node 1360 0 0 183
+node 1340 0 0 184
+node 1350 -10 0 185
+node 1380 -20 0 186
+node 1400 -20 0 187
+node 1400 0 0 188
+node 1380 0 0 189
+node 1390 -10 0 190
+node 1340 -60 0 191
+node 1360 -60 0 192
+node 1360 -40 0 193
+node 1340 -40 0 194
+node 1350 -50 0 195
+node 1380 -60 0 196
+node 1400 -60 0 197
+node 1400 -40 0 198
+node 1380 -40 0 199
+node 1390 -50 0 200
+node 1420 -60 0 201
+node 1440 -60 0 202
+node 1440 -40 0 203
+node 1420 -40 0 204
+node 1430 -50 0 205
+node 1420 -20 0 206
+node 1440 -20 0 207
+node 1440 0 0 208
+node 1420 0 0 209
+node 1430 -10 0 210
+node 1420 20 0 211
+node 1440 20 0 212
+node 1440 40 0 213
+node 1420 40 0 214
+node 1430 30 0 215
+node 1460 -60 0 216
+node 1480 -60 0 217
+node 1480 -40 0 218
+node 1460 -40 0 219
+node 1470 -50 0 220
+node 1460 -20 0 221
+node 1480 -20 0 222
+node 1480 0 0 223
+node 1460 0 0 224
+node 1470 -10 0 225
+node 1460 20 0 226
+node 1480 20 0 227
+node 1480 40 0 228
+node 1460 40 0 229
+node 1470 30 0 230
+node 1340 60 0 231
+node 1360 60 0 232
+node 1360 80 0 233
+node 1340 80 0 234
+node 1350 70 0 235
+node 1380 60 0 236
+node 1400 60 0 237
+node 1400 80 0 238
+node 1380 80 0 239
+node 1390 70 0 240
+node 1420 60 0 241
+node 1440 60 0 242
+node 1440 80 0 243
+node 1420 80 0 244
+node 1430 70 0 245
+node 1460 60 0 246
+node 1480 60 0 247
+node 1480 80 0 248
+node 1460 80 0 249
+node 1470 70 0 250
+node 1500 60 0 251
+node 1520 60 0 252
+node 1520 80 0 253
+node 1500 80 0 254
+node 1510 70 0 255
+node 1500 20 0 256
+node 1520 20 0 257
+node 1520 40 0 258
+node 1500 40 0 259
+node 1510 30 0 260
+node 1500 -20 0 261
+node 1520 -20 0 262
+node 1520 0 0 263
+node 1500 0 0 264
+node 1510 -10 0 265
+node 1500 -60 0 266
+node 1520 -60 0 267
+node 1520 -40 0 268
+node 1500 -40 0 269
+node 1510 -50 0 270
+node 1340 100 0 271
+node 1360 100 0 272
+node 1360 120 0 273
+node 1340 120 0 274
+node 1350 110 0 275
+node 1380 100 0 276
+node 1400 100 0 277
+node 1400 120 0 278
+node 1380 120 0 279
+node 1390 110 0 280
+node 1420 100 0 281
+node 1440 100 0 282
+node 1440 120 0 283
+node 1420 120 0 284
+node 1430 110 0 285
+node 1460 100 0 286
+node 1480 100 0 287
+node 1480 120 0 288
+node 1460 120 0 289
+node 1470 110 0 290
+node 1500 100 0 291
+node 1520 100 0 292
+node 1520 120 0 293
+node 1500 120 0 294
+node 1510 110 0 295
+node 1340 140 0 296
+node 1360 140 0 297
+node 1360 160 0 298
+node 1340 160 0 299
+node 1350 150 0 300
+node 1380 140 0 301
+node 1400 140 0 302
+node 1400 160 0 303
+node 1380 160 0 304
+node 1390 150 0 305
+node 1420 140 0 306
+node 1440 140 0 307
+node 1440 160 0 308
+node 1420 160 0 309
+node 1430 150 0 310
+node 1460 140 0 311
+node 1480 140 0 312
+node 1480 160 0 313
+node 1460 160 0 314
+node 1470 150 0 315
+node 1500 140 0 316
+node 1520 140 0 317
+node 1520 160 0 318
+node 1500 160 0 319
+node 1510 150 0 320
+node 1340 -100 0 321
+node 1360 -100 0 322
+node 1360 -80 0 323
+node 1340 -80 0 324
+node 1350 -90 0 325
+node 1340 -140 0 326
+node 1360 -140 0 327
+node 1360 -120 0 328
+node 1340 -120 0 329
+node 1350 -130 0 330
+node 1380 -140 0 331
+node 1400 -140 0 332
+node 1400 -120 0 333
+node 1380 -120 0 334
+node 1390 -130 0 335
+node 1380 -100 0 336
+node 1400 -100 0 337
+node 1400 -80 0 338
+node 1380 -80 0 339
+node 1390 -90 0 340
+node 1420 -100 0 341
+node 1440 -100 0 342
+node 1440 -80 0 343
+node 1420 -80 0 344
+node 1430 -90 0 345
+node 1420 -140 0 346
+node 1440 -140 0 347
+node 1440 -120 0 348
+node 1420 -120 0 349
+node 1430 -130 0 350
+node 1460 -140 0 351
+node 1480 -140 0 352
+node 1480 -120 0 353
+node 1460 -120 0 354
+node 1470 -130 0 355
+node 1460 -100 0 356
+node 1480 -100 0 357
+node 1480 -80 0 358
+node 1460 -80 0 359
+node 1470 -90 0 360
+node 1500 -100 0 361
+node 1520 -100 0 362
+node 1520 -80 0 363
+node 1500 -80 0 364
+node 1510 -90 0 365
+node 1500 -140 0 366
+node 1520 -140 0 367
+node 1520 -120 0 368
+node 1500 -120 0 369
+node 1510 -130 0 370
+node 1540 20 0 371
+node 1560 20 0 372
+node 1560 40 0 373
+node 1540 40 0 374
+node 1550 30 0 375
+node 1540 -20 0 376
+node 1560 -20 0 377
+node 1560 0 0 378
+node 1540 0 0 379
+node 1550 -10 0 380
+node 1540 -60 0 381
+node 1560 -60 0 382
+node 1560 -40 0 383
+node 1540 -40 0 384
+node 1550 -50 0 385
+node 1580 -60 0 386
+node 1600 -60 0 387
+node 1600 -40 0 388
+node 1580 -40 0 389
+node 1590 -50 0 390
+node 1580 -20 0 391
+node 1600 -20 0 392
+node 1600 0 0 393
+node 1580 0 0 394
+node 1590 -10 0 395
+node 1580 20 0 396
+node 1600 20 0 397
+node 1600 40 0 398
+node 1580 40 0 399
+node 1590 30 0 400
+node 1620 -60 0 401
+node 1640 -60 0 402
+node 1640 -40 0 403
+node 1620 -40 0 404
+node 1630 -50 0 405
+node 1620 -20 0 406
+node 1640 -20 0 407
+node 1640 0 0 408
+node 1620 0 0 409
+node 1630 -10 0 410
+node 1620 20 0 411
+node 1640 20 0 412
+node 1640 40 0 413
+node 1620 40 0 414
+node 1630 30 0 415
+node 1540 60 0 416
+node 1560 60 0 417
+node 1560 80 0 418
+node 1540 80 0 419
+node 1550 70 0 420
+node 1580 60 0 421
+node 1600 60 0 422
+node 1600 80 0 423
+node 1580 80 0 424
+node 1590 70 0 425
+node 1620 60 0 426
+node 1640 60 0 427
+node 1640 80 0 428
+node 1620 80 0 429
+node 1630 70 0 430
+node 1660 60 0 431
+node 1680 60 0 432
+node 1680 80 0 433
+node 1660 80 0 434
+node 1670 70 0 435
+node 1660 20 0 436
+node 1680 20 0 437
+node 1680 40 0 438
+node 1660 40 0 439
+node 1670 30 0 440
+node 1660 -20 0 441
+node 1680 -20 0 442
+node 1680 0 0 443
+node 1660 0 0 444
+node 1670 -10 0 445
+node 1660 -60 0 446
+node 1680 -60 0 447
+node 1680 -40 0 448
+node 1660 -40 0 449
+node 1670 -50 0 450
+node 1540 100 0 451
+node 1560 100 0 452
+node 1560 120 0 453
+node 1540 120 0 454
+node 1550 110 0 455
+node 1580 100 0 456
+node 1600 100 0 457
+node 1600 120 0 458
+node 1580 120 0 459
+node 1590 110 0 460
+node 1620 100 0 461
+node 1640 100 0 462
+node 1640 120 0 463
+node 1620 120 0 464
+node 1630 110 0 465
+node 1660 100 0 466
+node 1680 100 0 467
+node 1680 120 0 468
+node 1660 120 0 469
+node 1670 110 0 470
+node 1540 140 0 471
+node 1560 140 0 472
+node 1560 160 0 473
+node 1540 160 0 474
+node 1550 150 0 475
+node 1580 140 0 476
+node 1600 140 0 477
+node 1600 160 0 478
+node 1580 160 0 479
+node 1590 150 0 480
+node 1620 140 0 481
+node 1640 140 0 482
+node 1640 160 0 483
+node 1620 160 0 484
+node 1630 150 0 485
+node 1660 140 0 486
+node 1680 140 0 487
+node 1680 160 0 488
+node 1660 160 0 489
+node 1670 150 0 490
+node 1540 -140 0 491
+node 1560 -140 0 492
+node 1560 -120 0 493
+node 1540 -120 0 494
+node 1550 -130 0 495
+node 1540 -100 0 496
+node 1560 -100 0 497
+node 1560 -80 0 498
+node 1540 -80 0 499
+node 1550 -90 0 500
+node 1580 -100 0 501
+node 1600 -100 0 502
+node 1600 -80 0 503
+node 1580 -80 0 504
+node 1590 -90 0 505
+node 1580 -140 0 506
+node 1600 -140 0 507
+node 1600 -120 0 508
+node 1580 -120 0 509
+node 1590 -130 0 510
+node 1620 -140 0 511
+node 1640 -140 0 512
+node 1640 -120 0 513
+node 1620 -120 0 514
+node 1630 -130 0 515
+node 1620 -100 0 516
+node 1640 -100 0 517
+node 1640 -80 0 518
+node 1620 -80 0 519
+node 1630 -90 0 520
+node 1660 -100 0 521
+node 1680 -100 0 522
+node 1680 -80 0 523
+node 1660 -80 0 524
+node 1670 -90 0 525
+node 1660 -140 0 526
+node 1680 -140 0 527
+node 1680 -120 0 528
+node 1660 -120 0 529
+node 1670 -130 0 530
+node 1740.0 20.0 0 531
+node 1760.0 20.0 0 532
+node 1760.0 40.0 0 533
+node 1740.0 40.0 0 534
+node 1750.0 30.0 0 535
+node 1780.0 20.0 0 536
+node 1800.0 20.0 0 537
+node 1800.0 40.0 0 538
+node 1780.0 40.0 0 539
+node 1790.0 30.0 0 540
+node 1740.0 -20.0 0 541
+node 1760.0 -20.0 0 542
+node 1760.0 0.0 0 543
+node 1740.0 0.0 0 544
+node 1750.0 -10.0 0 545
+node 1780.0 -20.0 0 546
+node 1800.0 -20.0 0 547
+node 1800.0 0.0 0 548
+node 1780.0 0.0 0 549
+node 1790.0 -10.0 0 550
+node 1740.0 -60.0 0 551
+node 1760.0 -60.0 0 552
+node 1760.0 -40.0 0 553
+node 1740.0 -40.0 0 554
+node 1750.0 -50.0 0 555
+node 1780.0 -60.0 0 556
+node 1800.0 -60.0 0 557
+node 1800.0 -40.0 0 558
+node 1780.0 -40.0 0 559
+node 1790.0 -50.0 0 560
+node 1820.0 -60.0 0 561
+node 1840.0 -60.0 0 562
+node 1840.0 -40.0 0 563
+node 1820.0 -40.0 0 564
+node 1830.0 -50.0 0 565
+node 1820.0 -20.0 0 566
+node 1840.0 -20.0 0 567
+node 1840.0 0.0 0 568
+node 1820.0 0.0 0 569
+node 1830.0 -10.0 0 570
+node 1820.0 20.0 0 571
+node 1840.0 20.0 0 572
+node 1840.0 40.0 0 573
+node 1820.0 40.0 0 574
+node 1830.0 30.0 0 575
+node 1860.0 -60.0 0 576
+node 1880.0 -60.0 0 577
+node 1880.0 -40.0 0 578
+node 1860.0 -40.0 0 579
+node 1870.0 -50.0 0 580
+node 1860.0 -20.0 0 581
+node 1880.0 -20.0 0 582
+node 1880.0 0.0 0 583
+node 1860.0 0.0 0 584
+node 1870.0 -10.0 0 585
+node 1860.0 20.0 0 586
+node 1880.0 20.0 0 587
+node 1880.0 40.0 0 588
+node 1860.0 40.0 0 589
+node 1870.0 30.0 0 590
+node 1740.0 60.0 0 591
+node 1760.0 60.0 0 592
+node 1760.0 80.0 0 593
+node 1740.0 80.0 0 594
+node 1750.0 70.0 0 595
+node 1780.0 60.0 0 596
+node 1800.0 60.0 0 597
+node 1800.0 80.0 0 598
+node 1780.0 80.0 0 599
+node 1790.0 70.0 0 600
+node 1820.0 60.0 0 601
+node 1840.0 60.0 0 602
+node 1840.0 80.0 0 603
+node 1820.0 80.0 0 604
+node 1830.0 70.0 0 605
+node 1860.0 60.0 0 606
+node 1880.0 60.0 0 607
+node 1880.0 80.0 0 608
+node 1860.0 80.0 0 609
+node 1870.0 70.0 0 610
+node 1900.0 60.0 0 611
+node 1920.0 60.0 0 612
+node 1920.0 80.0 0 613
+node 1900.0 80.0 0 614
+node 1910.0 70.0 0 615
+node 1900.0 20.0 0 616
+node 1920.0 20.0 0 617
+node 1920.0 40.0 0 618
+node 1900.0 40.0 0 619
+node 1910.0 30.0 0 620
+node 1900.0 -20.0 0 621
+node 1920.0 -20.0 0 622
+node 1920.0 0.0 0 623
+node 1900.0 0.0 0 624
+node 1910.0 -10.0 0 625
+node 1900.0 -60.0 0 626
+node 1920.0 -60.0 0 627
+node 1920.0 -40.0 0 628
+node 1900.0 -40.0 0 629
+node 1910.0 -50.0 0 630
+node 1740.0 100.0 0 631
+node 1760.0 100.0 0 632
+node 1760.0 120.0 0 633
+node 1740.0 120.0 0 634
+node 1750.0 110.0 0 635
+node 1780.0 100.0 0 636
+node 1800.0 100.0 0 637
+node 1800.0 120.0 0 638
+node 1780.0 120.0 0 639
+node 1790.0 110.0 0 640
+node 1820.0 100.0 0 641
+node 1840.0 100.0 0 642
+node 1840.0 120.0 0 643
+node 1820.0 120.0 0 644
+node 1830.0 110.0 0 645
+node 1860.0 100.0 0 646
+node 1880.0 100.0 0 647
+node 1880.0 120.0 0 648
+node 1860.0 120.0 0 649
+node 1870.0 110.0 0 650
+node 1900.0 100.0 0 651
+node 1920.0 100.0 0 652
+node 1920.0 120.0 0 653
+node 1900.0 120.0 0 654
+node 1910.0 110.0 0 655
+node 1740.0 140.0 0 656
+node 1760.0 140.0 0 657
+node 1760.0 160.0 0 658
+node 1740.0 160.0 0 659
+node 1750.0 150.0 0 660
+node 1780.0 140.0 0 661
+node 1800.0 140.0 0 662
+node 1800.0 160.0 0 663
+node 1780.0 160.0 0 664
+node 1790.0 150.0 0 665
+node 1820.0 140.0 0 666
+node 1840.0 140.0 0 667
+node 1840.0 160.0 0 668
+node 1820.0 160.0 0 669
+node 1830.0 150.0 0 670
+node 1860.0 140.0 0 671
+node 1880.0 140.0 0 672
+node 1880.0 160.0 0 673
+node 1860.0 160.0 0 674
+node 1870.0 150.0 0 675
+node 1900.0 140.0 0 676
+node 1920.0 140.0 0 677
+node 1920.0 160.0 0 678
+node 1900.0 160.0 0 679
+node 1910.0 150.0 0 680
+node 1740.0 -100.0 0 681
+node 1760.0 -100.0 0 682
+node 1760.0 -80.0 0 683
+node 1740.0 -80.0 0 684
+node 1750.0 -90.0 0 685
+node 1740.0 -140.0 0 686
+node 1760.0 -140.0 0 687
+node 1760.0 -120.00000000000001 0 688
+node 1740.0 -120.00000000000001 0 689
+node 1750.0 -130.0 0 690
+node 1780.0 -140.0 0 691
+node 1800.0 -140.0 0 692
+node 1800.0 -120.00000000000001 0 693
+node 1780.0 -120.00000000000001 0 694
+node 1790.0 -130.0 0 695
+node 1780.0 -100.0 0 696
+node 1800.0 -100.0 0 697
+node 1800.0 -80.0 0 698
+node 1780.0 -80.0 0 699
+node 1790.0 -90.0 0 700
+node 1820.0 -100.0 0 701
+node 1840.0 -100.0 0 702
+node 1840.0 -80.0 0 703
+node 1820.0 -80.0 0 704
+node 1830.0 -90.0 0 705
+node 1820.0 -140.0 0 706
+node 1840.0 -140.0 0 707
+node 1840.0 -120.00000000000001 0 708
+node 1820.0 -120.00000000000001 0 709
+node 1830.0 -130.0 0 710
+node 1860.0 -140.0 0 711
+node 1880.0 -140.0 0 712
+node 1880.0 -120.00000000000001 0 713
+node 1860.0 -120.00000000000001 0 714
+node 1870.0 -130.0 0 715
+node 1860.0 -100.0 0 716
+node 1880.0 -100.0 0 717
+node 1880.0 -80.0 0 718
+node 1860.0 -80.0 0 719
+node 1870.0 -90.0 0 720
+node 1900.0 -100.0 0 721
+node 1920.0 -100.0 0 722
+node 1920.0 -80.0 0 723
+node 1900.0 -80.0 0 724
+node 1910.0 -90.0 0 725
+node 1900.0 -140.0 0 726
+node 1920.0 -140.0 0 727
+node 1920.0 -120.00000000000001 0 728
+node 1900.0 -120.00000000000001 0 729
+node 1910.0 -130.0 0 730
+node 1940.0 20.0 0 731
+node 1960.0 20.0 0 732
+node 1960.0 40.0 0 733
+node 1940.0 40.0 0 734
+node 1950.0 30.0 0 735
+node 1940.0 -20.0 0 736
+node 1960.0 -20.0 0 737
+node 1960.0 0.0 0 738
+node 1940.0 0.0 0 739
+node 1950.0 -10.0 0 740
+node 1940.0 -60.0 0 741
+node 1960.0 -60.0 0 742
+node 1960.0 -40.0 0 743
+node 1940.0 -40.0 0 744
+node 1950.0 -50.0 0 745
+node 1980.0 -60.0 0 746
+node 2000.0 -60.0 0 747
+node 2000.0 -40.0 0 748
+node 1980.0 -40.0 0 749
+node 1990.0 -50.0 0 750
+node 1980.0 -20.0 0 751
+node 2000.0 -20.0 0 752
+node 2000.0 0.0 0 753
+node 1980.0 0.0 0 754
+node 1990.0 -10.0 0 755
+node 1980.0 20.0 0 756
+node 2000.0 20.0 0 757
+node 2000.0 40.0 0 758
+node 1980.0 40.0 0 759
+node 1990.0 30.0 0 760
+node 2020.0 -60.0 0 761
+node 2040.0 -60.0 0 762
+node 2040.0 -40.0 0 763
+node 2020.0 -40.0 0 764
+node 2030.0 -50.0 0 765
+node 2020.0 -20.0 0 766
+node 2040.0 -20.0 0 767
+node 2040.0 0.0 0 768
+node 2020.0 0.0 0 769
+node 2030.0 -10.0 0 770
+node 2020.0 20.0 0 771
+node 2040.0 20.0 0 772
+node 2040.0 40.0 0 773
+node 2020.0 40.0 0 774
+node 2030.0 30.0 0 775
+node 1940.0 60.0 0 776
+node 1960.0 60.0 0 777
+node 1960.0 80.0 0 778
+node 1940.0 80.0 0 779
+node 1950.0 70.0 0 780
+node 1980.0 60.0 0 781
+node 2000.0 60.0 0 782
+node 2000.0 80.0 0 783
+node 1980.0 80.0 0 784
+node 1990.0 70.0 0 785
+node 2020.0 60.0 0 786
+node 2040.0 60.0 0 787
+node 2040.0 80.0 0 788
+node 2020.0 80.0 0 789
+node 2030.0 70.0 0 790
+node 2060.0 60.0 0 791
+node 2080.0 60.0 0 792
+node 2080.0 80.0 0 793
+node 2060.0 80.0 0 794
+node 2070.0 70.0 0 795
+node 2060.0 20.0 0 796
+node 2080.0 20.0 0 797
+node 2080.0 40.0 0 798
+node 2060.0 40.0 0 799
+node 2070.0 30.0 0 800
+node 2060.0 -20.0 0 801
+node 2080.0 -20.0 0 802
+node 2080.0 0.0 0 803
+node 2060.0 0.0 0 804
+node 2070.0 -10.0 0 805
+node 2060.0 -60.0 0 806
+node 2080.0 -60.0 0 807
+node 2080.0 -40.0 0 808
+node 2060.0 -40.0 0 809
+node 2070.0 -50.0 0 810
+node 1940.0 100.0 0 811
+node 1960.0 100.0 0 812
+node 1960.0 120.0 0 813
+node 1940.0 120.0 0 814
+node 1950.0 110.0 0 815
+node 1980.0 100.0 0 816
+node 2000.0 100.0 0 817
+node 2000.0 120.0 0 818
+node 1980.0 120.0 0 819
+node 1990.0 110.0 0 820
+node 2020.0 100.0 0 821
+node 2040.0 100.0 0 822
+node 2040.0 120.0 0 823
+node 2020.0 120.0 0 824
+node 2030.0 110.0 0 825
+node 2060.0 100.0 0 826
+node 2080.0 100.0 0 827
+node 2080.0 120.0 0 828
+node 2060.0 120.0 0 829
+node 2070.0 110.0 0 830
+node 1940.0 140.0 0 831
+node 1960.0 140.0 0 832
+node 1960.0 160.0 0 833
+node 1940.0 160.0 0 834
+node 1950.0 150.0 0 835
+node 1980.0 140.0 0 836
+node 2000.0 140.0 0 837
+node 2000.0 160.0 0 838
+node 1980.0 160.0 0 839
+node 1990.0 150.0 0 840
+node 2020.0 140.0 0 841
+node 2040.0 140.0 0 842
+node 2040.0 160.0 0 843
+node 2020.0 160.0 0 844
+node 2030.0 150.0 0 845
+node 2060.0 140.0 0 846
+node 2080.0 140.0 0 847
+node 2080.0 160.0 0 848
+node 2060.0 160.0 0 849
+node 2070.0 150.0 0 850
+node 1940.0 -140.0 0 851
+node 1960.0 -140.0 0 852
+node 1960.0 -120.00000000000001 0 853
+node 1940.0 -120.00000000000001 0 854
+node 1950.0 -130.0 0 855
+node 1940.0 -100.0 0 856
+node 1960.0 -100.0 0 857
+node 1960.0 -80.0 0 858
+node 1940.0 -80.0 0 859
+node 1950.0 -90.0 0 860
+node 1980.0 -100.0 0 861
+node 2000.0 -100.0 0 862
+node 2000.0 -80.0 0 863
+node 1980.0 -80.0 0 864
+node 1990.0 -90.0 0 865
+node 1980.0 -140.0 0 866
+node 2000.0 -140.0 0 867
+node 2000.0 -120.00000000000001 0 868
+node 1980.0 -120.00000000000001 0 869
+node 1990.0 -130.0 0 870
+node 2020.0 -140.0 0 871
+node 2040.0 -140.0 0 872
+node 2040.0 -120.00000000000001 0 873
+node 2020.0 -120.00000000000001 0 874
+node 2030.0 -130.0 0 875
+node 2020.0 -100.0 0 876
+node 2040.0 -100.0 0 877
+node 2040.0 -80.0 0 878
+node 2020.0 -80.0 0 879
+node 2030.0 -90.0 0 880
+node 2060.0 -100.0 0 881
+node 2080.0 -100.0 0 882
+node 2080.0 -80.0 0 883
+node 2060.0 -80.0 0 884
+node 2070.0 -90.0 0 885
+node 2060.0 -140.0 0 886
+node 2080.0 -140.0 0 887
+node 2080.0 -120.00000000000001 0 888
+node 2060.0 -120.00000000000001 0 889
+node 2070.0 -130.0 0 890
 link 0 1 repeater
 link 1 2 repeater
 link 2 3 repeater
@@ -245,8 +1023,6 @@ link 54 71 inverter
 link 54 72 inverter
 link 54 73 inverter
 link 90 93 inverter
-link 90 91 repeater
-link 91 93 repeater
 link 93 94 inverter
 link 9 10 repeater
 link 10 11 repeater
@@ -258,10 +1034,6 @@ link 97 98 repeater
 link 98 99 repeater
 link 100 101 inverter
 link 101 100 inverter
-link 104 107 inverter
-link 103 107 repeater
-link 104 108 inverter
-link 103 108 inverter
 link 110 109 repeater
 link 111 109 inverter
 link 110 102 inverter
@@ -269,8 +1041,673 @@ link 111 102 inverter
 link 109 101 inverter
 link 102 100 inverter
 link 100 112 repeater
-link 108 105 inverter
-link 107 106 inverter
+link 113 114 inverter
+link 114 113 inverter
+link 117 116 repeater
+link 118 116 inverter
+link 117 115 inverter
+link 118 115 inverter
+link 116 114 inverter
+link 115 113 inverter
+link 113 119 repeater
+link 120 121 inverter
+link 121 120 inverter
+link 124 123 repeater
+link 125 123 inverter
+link 124 122 inverter
+link 125 122 inverter
+link 123 121 inverter
+link 122 120 inverter
+link 120 126 repeater
+link 127 128 inverter
+link 128 127 inverter
+link 131 130 repeater
+link 132 130 inverter
+link 131 129 inverter
+link 132 129 inverter
+link 130 128 inverter
+link 129 127 inverter
+link 127 133 repeater
+link 134 135 inverter
+link 135 134 inverter
+link 138 137 repeater
+link 139 137 inverter
+link 138 136 inverter
+link 139 136 inverter
+link 137 135 inverter
+link 136 134 inverter
+link 134 140 repeater
+link 141 142 inverter
+link 142 141 inverter
+link 145 144 repeater
+link 146 144 inverter
+link 145 143 inverter
+link 146 143 inverter
+link 144 142 inverter
+link 143 141 inverter
+link 141 147 repeater
+link 148 149 inverter
+link 149 148 inverter
+link 152 151 repeater
+link 153 151 inverter
+link 152 150 inverter
+link 153 150 inverter
+link 151 149 inverter
+link 150 148 inverter
+link 148 154 repeater
+link 155 156 inverter
+link 156 155 inverter
+link 159 158 repeater
+link 160 158 inverter
+link 159 157 inverter
+link 160 157 inverter
+link 158 156 inverter
+link 157 155 inverter
+link 155 161 repeater
+link 162 111 repeater
+link 162 118 repeater
+link 162 125 repeater
+link 162 132 repeater
+link 162 139 repeater
+link 162 146 repeater
+link 162 153 repeater
+link 162 160 repeater
+link 164 165 inverter
+link 163 165 repeater
+link 164 166 inverter
+link 163 166 inverter
+link 166 167 inverter
+link 165 168 inverter
+link 103 107 inverter
+link 105 107 inverter
+link 103 108 repeater
+link 99 169 repeater
+link 169 105 repeater
+link 103 104 inverter
+link 104 103 inverter
+link 104 106 inverter
+link 105 106 inverter
+link 106 103 inverter
+link 107 104 inverter
+link 90 91 repeater
+link 91 170 repeater
+link 170 93 repeater
+link 175 171 repeater
+link 175 172 repeater
+link 175 174 repeater
+link 175 173 repeater
+link 180 176 repeater
+link 180 177 repeater
+link 180 179 repeater
+link 180 178 repeater
+link 185 181 repeater
+link 185 182 repeater
+link 185 184 repeater
+link 185 183 repeater
+link 190 186 repeater
+link 190 187 repeater
+link 190 189 repeater
+link 190 188 repeater
+link 195 191 repeater
+link 195 192 repeater
+link 195 194 repeater
+link 195 193 repeater
+link 200 196 repeater
+link 200 197 repeater
+link 200 199 repeater
+link 200 198 repeater
+link 205 201 repeater
+link 205 202 repeater
+link 205 204 repeater
+link 205 203 repeater
+link 210 206 repeater
+link 210 207 repeater
+link 210 209 repeater
+link 210 208 repeater
+link 215 211 repeater
+link 215 212 repeater
+link 215 214 repeater
+link 215 213 repeater
+link 220 216 repeater
+link 220 217 repeater
+link 220 219 repeater
+link 220 218 repeater
+link 225 221 repeater
+link 225 222 repeater
+link 225 224 repeater
+link 225 223 repeater
+link 230 226 repeater
+link 230 227 repeater
+link 230 229 repeater
+link 230 228 repeater
+link 235 231 repeater
+link 235 232 repeater
+link 235 234 repeater
+link 235 233 repeater
+link 240 236 repeater
+link 240 237 repeater
+link 240 239 repeater
+link 240 238 repeater
+link 245 241 repeater
+link 245 242 repeater
+link 245 244 repeater
+link 245 243 repeater
+link 250 246 repeater
+link 250 247 repeater
+link 250 249 repeater
+link 250 248 repeater
+link 255 251 repeater
+link 255 252 repeater
+link 255 254 repeater
+link 255 253 repeater
+link 260 256 repeater
+link 260 257 repeater
+link 260 259 repeater
+link 260 258 repeater
+link 265 261 repeater
+link 265 262 repeater
+link 265 264 repeater
+link 265 263 repeater
+link 270 266 repeater
+link 270 267 repeater
+link 270 269 repeater
+link 270 268 repeater
+link 275 271 repeater
+link 275 272 repeater
+link 275 274 repeater
+link 275 273 repeater
+link 280 276 repeater
+link 280 277 repeater
+link 280 279 repeater
+link 280 278 repeater
+link 285 281 repeater
+link 285 282 repeater
+link 285 284 repeater
+link 285 283 repeater
+link 290 286 repeater
+link 290 287 repeater
+link 290 289 repeater
+link 290 288 repeater
+link 295 291 repeater
+link 295 292 repeater
+link 295 294 repeater
+link 295 293 repeater
+link 300 296 repeater
+link 300 297 repeater
+link 300 299 repeater
+link 300 298 repeater
+link 305 301 repeater
+link 305 302 repeater
+link 305 304 repeater
+link 305 303 repeater
+link 310 306 repeater
+link 310 307 repeater
+link 310 309 repeater
+link 310 308 repeater
+link 315 311 repeater
+link 315 312 repeater
+link 315 314 repeater
+link 315 313 repeater
+link 320 316 repeater
+link 320 317 repeater
+link 320 319 repeater
+link 320 318 repeater
+link 325 321 repeater
+link 325 322 repeater
+link 325 324 repeater
+link 325 323 repeater
+link 330 326 repeater
+link 330 327 repeater
+link 330 329 repeater
+link 330 328 repeater
+link 335 331 repeater
+link 335 332 repeater
+link 335 334 repeater
+link 335 333 repeater
+link 340 336 repeater
+link 340 337 repeater
+link 340 339 repeater
+link 340 338 repeater
+link 345 341 repeater
+link 345 342 repeater
+link 345 344 repeater
+link 345 343 repeater
+link 350 346 repeater
+link 350 347 repeater
+link 350 349 repeater
+link 350 348 repeater
+link 355 351 repeater
+link 355 352 repeater
+link 355 354 repeater
+link 355 353 repeater
+link 360 356 repeater
+link 360 357 repeater
+link 360 359 repeater
+link 360 358 repeater
+link 365 361 repeater
+link 365 362 repeater
+link 365 364 repeater
+link 365 363 repeater
+link 370 366 repeater
+link 370 367 repeater
+link 370 369 repeater
+link 370 368 repeater
+link 375 371 repeater
+link 375 372 repeater
+link 375 374 repeater
+link 375 373 repeater
+link 380 376 repeater
+link 380 377 repeater
+link 380 379 repeater
+link 380 378 repeater
+link 385 381 repeater
+link 385 382 repeater
+link 385 384 repeater
+link 385 383 repeater
+link 390 386 repeater
+link 390 387 repeater
+link 390 389 repeater
+link 390 388 repeater
+link 395 391 repeater
+link 395 392 repeater
+link 395 394 repeater
+link 395 393 repeater
+link 400 396 repeater
+link 400 397 repeater
+link 400 399 repeater
+link 400 398 repeater
+link 405 401 repeater
+link 405 402 repeater
+link 405 404 repeater
+link 405 403 repeater
+link 410 406 repeater
+link 410 407 repeater
+link 410 409 repeater
+link 410 408 repeater
+link 415 411 repeater
+link 415 412 repeater
+link 415 414 repeater
+link 415 413 repeater
+link 420 416 repeater
+link 420 417 repeater
+link 420 419 repeater
+link 420 418 repeater
+link 425 421 repeater
+link 425 422 repeater
+link 425 424 repeater
+link 425 423 repeater
+link 430 426 repeater
+link 430 427 repeater
+link 430 429 repeater
+link 430 428 repeater
+link 435 431 repeater
+link 435 432 repeater
+link 435 434 repeater
+link 435 433 repeater
+link 440 436 repeater
+link 440 437 repeater
+link 440 439 repeater
+link 440 438 repeater
+link 445 441 repeater
+link 445 442 repeater
+link 445 444 repeater
+link 445 443 repeater
+link 450 446 repeater
+link 450 447 repeater
+link 450 449 repeater
+link 450 448 repeater
+link 455 451 repeater
+link 455 452 repeater
+link 455 454 repeater
+link 455 453 repeater
+link 460 456 repeater
+link 460 457 repeater
+link 460 459 repeater
+link 460 458 repeater
+link 465 461 repeater
+link 465 462 repeater
+link 465 464 repeater
+link 465 463 repeater
+link 470 466 repeater
+link 470 467 repeater
+link 470 469 repeater
+link 470 468 repeater
+link 475 471 repeater
+link 475 472 repeater
+link 475 474 repeater
+link 475 473 repeater
+link 480 476 repeater
+link 480 477 repeater
+link 480 479 repeater
+link 480 478 repeater
+link 485 481 repeater
+link 485 482 repeater
+link 485 484 repeater
+link 485 483 repeater
+link 490 486 repeater
+link 490 487 repeater
+link 490 489 repeater
+link 490 488 repeater
+link 495 491 repeater
+link 495 492 repeater
+link 495 494 repeater
+link 495 493 repeater
+link 500 496 repeater
+link 500 497 repeater
+link 500 499 repeater
+link 500 498 repeater
+link 505 501 repeater
+link 505 502 repeater
+link 505 504 repeater
+link 505 503 repeater
+link 510 506 repeater
+link 510 507 repeater
+link 510 509 repeater
+link 510 508 repeater
+link 515 511 repeater
+link 515 512 repeater
+link 515 514 repeater
+link 515 513 repeater
+link 520 516 repeater
+link 520 517 repeater
+link 520 519 repeater
+link 520 518 repeater
+link 525 521 repeater
+link 525 522 repeater
+link 525 524 repeater
+link 525 523 repeater
+link 530 526 repeater
+link 530 527 repeater
+link 530 529 repeater
+link 530 528 repeater
+link 535 531 repeater
+link 535 532 repeater
+link 535 534 repeater
+link 535 533 repeater
+link 540 536 repeater
+link 540 537 repeater
+link 540 539 repeater
+link 540 538 repeater
+link 545 541 repeater
+link 545 542 repeater
+link 545 544 repeater
+link 545 543 repeater
+link 550 546 repeater
+link 550 547 repeater
+link 550 549 repeater
+link 550 548 repeater
+link 555 551 repeater
+link 555 552 repeater
+link 555 554 repeater
+link 555 553 repeater
+link 560 556 repeater
+link 560 557 repeater
+link 560 559 repeater
+link 560 558 repeater
+link 565 561 repeater
+link 565 562 repeater
+link 565 564 repeater
+link 565 563 repeater
+link 570 566 repeater
+link 570 567 repeater
+link 570 569 repeater
+link 570 568 repeater
+link 575 571 repeater
+link 575 572 repeater
+link 575 574 repeater
+link 575 573 repeater
+link 580 576 repeater
+link 580 577 repeater
+link 580 579 repeater
+link 580 578 repeater
+link 585 581 repeater
+link 585 582 repeater
+link 585 584 repeater
+link 585 583 repeater
+link 590 586 repeater
+link 590 587 repeater
+link 590 589 repeater
+link 590 588 repeater
+link 595 591 repeater
+link 595 592 repeater
+link 595 594 repeater
+link 595 593 repeater
+link 600 596 repeater
+link 600 597 repeater
+link 600 599 repeater
+link 600 598 repeater
+link 605 601 repeater
+link 605 602 repeater
+link 605 604 repeater
+link 605 603 repeater
+link 610 606 repeater
+link 610 607 repeater
+link 610 609 repeater
+link 610 608 repeater
+link 615 611 repeater
+link 615 612 repeater
+link 615 614 repeater
+link 615 613 repeater
+link 620 616 repeater
+link 620 617 repeater
+link 620 619 repeater
+link 620 618 repeater
+link 625 621 repeater
+link 625 622 repeater
+link 625 624 repeater
+link 625 623 repeater
+link 630 626 repeater
+link 630 627 repeater
+link 630 629 repeater
+link 630 628 repeater
+link 635 631 repeater
+link 635 632 repeater
+link 635 634 repeater
+link 635 633 repeater
+link 640 636 repeater
+link 640 637 repeater
+link 640 639 repeater
+link 640 638 repeater
+link 645 641 repeater
+link 645 642 repeater
+link 645 644 repeater
+link 645 643 repeater
+link 650 646 repeater
+link 650 647 repeater
+link 650 649 repeater
+link 650 648 repeater
+link 655 651 repeater
+link 655 652 repeater
+link 655 654 repeater
+link 655 653 repeater
+link 660 656 repeater
+link 660 657 repeater
+link 660 659 repeater
+link 660 658 repeater
+link 665 661 repeater
+link 665 662 repeater
+link 665 664 repeater
+link 665 663 repeater
+link 670 666 repeater
+link 670 667 repeater
+link 670 669 repeater
+link 670 668 repeater
+link 675 671 repeater
+link 675 672 repeater
+link 675 674 repeater
+link 675 673 repeater
+link 680 676 repeater
+link 680 677 repeater
+link 680 679 repeater
+link 680 678 repeater
+link 685 681 repeater
+link 685 682 repeater
+link 685 684 repeater
+link 685 683 repeater
+link 690 686 repeater
+link 690 687 repeater
+link 690 689 repeater
+link 690 688 repeater
+link 695 691 repeater
+link 695 692 repeater
+link 695 694 repeater
+link 695 693 repeater
+link 700 696 repeater
+link 700 697 repeater
+link 700 699 repeater
+link 700 698 repeater
+link 705 701 repeater
+link 705 702 repeater
+link 705 704 repeater
+link 705 703 repeater
+link 710 706 repeater
+link 710 707 repeater
+link 710 709 repeater
+link 710 708 repeater
+link 715 711 repeater
+link 715 712 repeater
+link 715 714 repeater
+link 715 713 repeater
+link 720 716 repeater
+link 720 717 repeater
+link 720 719 repeater
+link 720 718 repeater
+link 725 721 repeater
+link 725 722 repeater
+link 725 724 repeater
+link 725 723 repeater
+link 730 726 repeater
+link 730 727 repeater
+link 730 729 repeater
+link 730 728 repeater
+link 735 731 repeater
+link 735 732 repeater
+link 735 734 repeater
+link 735 733 repeater
+link 740 736 repeater
+link 740 737 repeater
+link 740 739 repeater
+link 740 738 repeater
+link 745 741 repeater
+link 745 742 repeater
+link 745 744 repeater
+link 745 743 repeater
+link 750 746 repeater
+link 750 747 repeater
+link 750 749 repeater
+link 750 748 repeater
+link 755 751 repeater
+link 755 752 repeater
+link 755 754 repeater
+link 755 753 repeater
+link 760 756 repeater
+link 760 757 repeater
+link 760 759 repeater
+link 760 758 repeater
+link 765 761 repeater
+link 765 762 repeater
+link 765 764 repeater
+link 765 763 repeater
+link 770 766 repeater
+link 770 767 repeater
+link 770 769 repeater
+link 770 768 repeater
+link 775 771 repeater
+link 775 772 repeater
+link 775 774 repeater
+link 775 773 repeater
+link 780 776 repeater
+link 780 777 repeater
+link 780 779 repeater
+link 780 778 repeater
+link 785 781 repeater
+link 785 782 repeater
+link 785 784 repeater
+link 785 783 repeater
+link 790 786 repeater
+link 790 787 repeater
+link 790 789 repeater
+link 790 788 repeater
+link 795 791 repeater
+link 795 792 repeater
+link 795 794 repeater
+link 795 793 repeater
+link 800 796 repeater
+link 800 797 repeater
+link 800 799 repeater
+link 800 798 repeater
+link 805 801 repeater
+link 805 802 repeater
+link 805 804 repeater
+link 805 803 repeater
+link 810 806 repeater
+link 810 807 repeater
+link 810 809 repeater
+link 810 808 repeater
+link 815 811 repeater
+link 815 812 repeater
+link 815 814 repeater
+link 815 813 repeater
+link 820 816 repeater
+link 820 817 repeater
+link 820 819 repeater
+link 820 818 repeater
+link 825 821 repeater
+link 825 822 repeater
+link 825 824 repeater
+link 825 823 repeater
+link 830 826 repeater
+link 830 827 repeater
+link 830 829 repeater
+link 830 828 repeater
+link 835 831 repeater
+link 835 832 repeater
+link 835 834 repeater
+link 835 833 repeater
+link 840 836 repeater
+link 840 837 repeater
+link 840 839 repeater
+link 840 838 repeater
+link 845 841 repeater
+link 845 842 repeater
+link 845 844 repeater
+link 845 843 repeater
+link 850 846 repeater
+link 850 847 repeater
+link 850 849 repeater
+link 850 848 repeater
+link 855 851 repeater
+link 855 852 repeater
+link 855 854 repeater
+link 855 853 repeater
+link 860 856 repeater
+link 860 857 repeater
+link 860 859 repeater
+link 860 858 repeater
+link 865 861 repeater
+link 865 862 repeater
+link 865 864 repeater
+link 865 863 repeater
+link 870 866 repeater
+link 870 867 repeater
+link 870 869 repeater
+link 870 868 repeater
+link 875 871 repeater
+link 875 872 repeater
+link 875 874 repeater
+link 875 873 repeater
+link 880 876 repeater
+link 880 877 repeater
+link 880 879 repeater
+link 880 878 repeater
+link 885 881 repeater
+link 885 882 repeater
+link 885 884 repeater
+link 885 883 repeater
+link 890 886 repeater
+link 890 887 repeater
+link 890 889 repeater
+link 890 888 repeater
 lever 100 200 0 10 0
 lever 100 400 26 10 1
 lever 450 450 30 7 0
@@ -279,8 +1716,8 @@ lever 237 -77 32 7 0
 lever 240 -1 34 7 0
 lever 437 -82 36 7 0
 lever 435 2 37 7 0
-lever 243 -237 40 7 1
-lever 241 -159 39 7 1
+lever 243 -237 40 7 0
+lever 241 -159 39 7 0
 lever 182 -401 51 7 0
 lever 179 -359 52 7 0
 lever 699 -195 57 7 0
@@ -288,7 +1725,14 @@ lever 659 -193 56 7 0
 lever 620 -195 55 7 0
 lever 580 -193 54 7 0
 lever 737 -40 90 7 0
-lever 1001 286 103 7 1
-lever 1039 282 104 7 0
-lever 860 522 111 7 0
-lever 820 522 110 7 0
+lever 820 560 110 7 0
+lever 900 560 117 7 0
+lever 980 560 124 7 0
+lever 1060 560 131 7 0
+lever 1140 560 138 7 0
+lever 1220 560 145 7 0
+lever 1300 560 152 7 0
+lever 1380 560 159 7 0
+lever 740 520 162 7 0
+lever 281 646 163 7 1
+lever 319 642 164 7 0

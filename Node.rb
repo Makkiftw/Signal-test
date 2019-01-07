@@ -7,12 +7,16 @@ class Node
 		
 		@value = 0
 		
+		@outputs = []
+		
 	end
 	
 	def update
 		
 		@initial = 0
-		@window.transfer_signal(@value, @id)
+		for i in 0..@outputs.length-1
+			@outputs[i].get_signal(@value, @id)
+		end
 		
 	end
 	
@@ -33,47 +37,61 @@ class Node
 		if @initial == 0
 			@value = value
 		else
-			@window.transfer_signal(@initial, @id)
+			for i in 0..@outputs.length-1
+				@outputs[i].get_signal(@initial, @id)
+			end
 			@initial = 0
 		end
 		
 	end
 	
+	def set_output(inst)
+		@outputs << inst
+	end
+	
+	def remove_output(inst)
+		@outputs.delete(inst)
+	end
+	
 	def draw
 		
-		if @value == 0
-			color_new = $off_color
-		else
-			color_new = $on_color
-		end
+		cam_corelate_x = $window_width/2 - $camera_x*$camera_zoom
+		cam_corelate_y = $window_height/2 - $camera_y*$camera_zoom
 		
-		if $select_start != false
+		if @window.point_in_rectangle(@x*$camera_zoom + cam_corelate_x, @y*$camera_zoom + cam_corelate_y, 0, 0, $window_width, $window_height)
 			
+			if @value == 0
+				color_new = $off_color
+			else
+				color_new = $on_color
+			end
+			
+			if $select_start != false
+				
+				
+				m_real_x = (@window.mouse_x-$window_width/2)/$camera_zoom+$camera_x
+				m_real_y = (@window.mouse_y-$window_height/2)/$camera_zoom+$camera_y
+				
+				x1 = [$select_start[0], m_real_x].min
+				y1 = [$select_start[1], m_real_y].min
+				
+				x2 = [$select_start[0], m_real_x].max
+				y2 = [$select_start[1], m_real_y].max
+				
+				if @window.point_in_rectangle(@x, @y, x1, y1, x2, y2)
+					color_new = 0xff00aaff
+				end
+			end
+			
+			@window.circle_img.draw_rot(@x*$camera_zoom + cam_corelate_x, @y*$camera_zoom + cam_corelate_y, 2, 0, 0.5, 0.5, 1.0*$camera_zoom, 1.0*$camera_zoom, color_new)
 			
 			m_real_x = (@window.mouse_x-$window_width/2)/$camera_zoom+$camera_x
 			m_real_y = (@window.mouse_y-$window_height/2)/$camera_zoom+$camera_y
 			
-			x1 = [$select_start[0], m_real_x].min
-			y1 = [$select_start[1], m_real_y].min
-			
-			x2 = [$select_start[0], m_real_x].max
-			y2 = [$select_start[1], m_real_y].max
-			
-			if @window.point_in_rectangle(@x, @y, x1, y1, x2, y2)
-				color_new = 0xff00aaff
-			end
-		end
-		
-		@window.circle_img.draw_rot(@x*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, @y*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, 2, 0, 0.5, 0.5, 1.0*$camera_zoom, 1.0*$camera_zoom, color_new)
-		
-		# @window.font.draw("#{@id}", (@x-10)*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, (@y-20)*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, 0, 1.0, 1.0, color_new)
-		
-		m_real_x = (@window.mouse_x-$window_width/2)/$camera_zoom+$camera_x
-		m_real_y = (@window.mouse_y-$window_height/2)/$camera_zoom+$camera_y
-		
-		if @window.cursor == "repeater" or @window.cursor == "inverter" or @window.cursor == "lever"
-			if @window.point_in_rectangle(m_real_x, m_real_y, @x-7, @y-7, @x+7, @y+7)
-				@window.circle_img.draw_rot(@x*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, @y*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, 2, 0, 0.5, 0.5, 1.0*$camera_zoom, 1.0*$camera_zoom, 0xff00ff00)
+			if @window.cursor == "repeater" or @window.cursor == "inverter" or @window.cursor == "lever"
+				if @window.point_in_rectangle(m_real_x, m_real_y, @x-7, @y-7, @x+7, @y+7)
+					@window.circle_img.draw_rot(@x*$camera_zoom + cam_corelate_x, @y*$camera_zoom + cam_corelate_y, 2, 0, 0.5, 0.5, 1.0*$camera_zoom, 1.0*$camera_zoom, 0xff00ff00)
+				end
 			end
 		end
 		

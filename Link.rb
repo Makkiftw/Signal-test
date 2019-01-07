@@ -8,7 +8,26 @@ class Link
 		
 		
 		@input = @window.find_node(input_id)
+		
+		@input.set_output(self)
+		
 		@output = @window.find_node(output_id)
+		
+		@reverse_dir = @window.point_direction(@output.x, @output.y, @input.x, @input.y)
+		@mid_x = (@input.x + @output.x)/2
+		@mid_y = (@input.y + @output.y)/2
+		
+		@in_x = @input.x + Gosu::offset_x(@reverse_dir+90, 3)
+		@in_y = @input.y + Gosu::offset_y(@reverse_dir+90, 3)
+		
+		@out_x = @output.x + Gosu::offset_x(@reverse_dir+90, 3)
+		@out_y = @output.y + Gosu::offset_y(@reverse_dir+90, 3)
+		
+		@mid_offset_x = Gosu::offset_x(@reverse_dir - 40, 10)
+		@mid_offset_y = Gosu::offset_y(@reverse_dir - 40, 10)
+		
+		@out_offset_x = Gosu::offset_x(@reverse_dir, 10)
+		@out_offset_y = Gosu::offset_y(@reverse_dir, 10)
 		
 		if @type == "repeater"
 			@value = 0
@@ -20,6 +39,10 @@ class Link
 			end
 		end
 		
+	end
+	
+	def remove_node_link
+		@input.remove_output(self)
 	end
 	
 	def update
@@ -54,38 +77,33 @@ class Link
 	
 	def draw
 		
-		if @value == 0
-			color_new = $off_color
-		else
-			color_new = $on_color
+		cam_corelate_x = $window_width/2 - $camera_x*$camera_zoom
+		cam_corelate_y = $window_height/2 - $camera_y*$camera_zoom
+		
+		if @window.point_in_rectangle(@input.x*$camera_zoom + cam_corelate_x, @input.y*$camera_zoom + cam_corelate_y, 0, 0, $window_width, $window_height) or @window.point_in_rectangle(@output.x*$camera_zoom + cam_corelate_x, @output.y*$camera_zoom + cam_corelate_y, 0, 0, $window_width, $window_height)
+			
+			if @value == 0
+				color_new = $off_color
+			else
+				color_new = $on_color
+			end
+			
+			
+			
+			if @type == "repeater"
+				
+				@window.draw_line(@input.x*$camera_zoom + cam_corelate_x, @input.y*$camera_zoom + cam_corelate_y, color_new, @output.x*$camera_zoom + cam_corelate_x, @output.y*$camera_zoom + cam_corelate_y, color_new, 1)
+				
+				@window.draw_line(@mid_x*$camera_zoom + cam_corelate_x, @mid_y*$camera_zoom + cam_corelate_y, color_new, (@mid_x + @mid_offset_x)*$camera_zoom + cam_corelate_x, (@mid_y + @mid_offset_y)*$camera_zoom + cam_corelate_y, color_new, 1)
+				
+			else
+				
+				@window.draw_line(@in_x*$camera_zoom + cam_corelate_x, @in_y*$camera_zoom + cam_corelate_y, color_new, (@out_x + @out_offset_x)*$camera_zoom + cam_corelate_x, (@out_y + @out_offset_y)*$camera_zoom + cam_corelate_y, color_new, 1)
+				@window.circle_img.draw_rot((@out_x + @out_offset_x)*$camera_zoom + cam_corelate_x, (@out_y + @out_offset_y)*$camera_zoom + cam_corelate_y, 2, 0, 0.5, 0.5, 0.4*$camera_zoom, 0.4*$camera_zoom, color_new)
+				
+			end
 		end
 		
-		reverse_dir = @window.point_direction(@output.x, @output.y, @input.x, @input.y)
-		
-		if @type == "repeater"
-			
-			## @x*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom
-			
-			@window.draw_line(@input.x*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, @input.y*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, color_new, @output.x*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, @output.y*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, color_new, 1)
-			
-			mid_x = (@input.x + @output.x)/2
-			mid_y = (@input.y + @output.y)/2
-			
-			@window.draw_line(mid_x*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, mid_y*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, color_new, (mid_x + Gosu::offset_x(reverse_dir + 40, 10))*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, (mid_y + Gosu::offset_y(reverse_dir + 40, 10))*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, color_new, 1)
-			@window.draw_line(mid_x*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, mid_y*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, color_new, (mid_x + Gosu::offset_x(reverse_dir - 40, 10))*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, (mid_y + Gosu::offset_y(reverse_dir - 40, 10))*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, color_new, 1)
-			
-		else
-			
-			in_x = @input.x + Gosu::offset_x(reverse_dir+90, 3)
-			in_y = @input.y + Gosu::offset_y(reverse_dir+90, 3)
-			
-			out_x = @output.x + Gosu::offset_x(reverse_dir+90, 3)
-			out_y = @output.y + Gosu::offset_y(reverse_dir+90, 3)
-			
-			@window.draw_line(in_x*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, in_y*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, color_new, (out_x + Gosu::offset_x(reverse_dir, 10))*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, (out_y + Gosu::offset_y(reverse_dir, 10))*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, color_new, 1)
-			@window.circle_img.draw_rot((out_x + Gosu::offset_x(reverse_dir, 10))*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, (out_y + Gosu::offset_y(reverse_dir, 10))*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, 2, 0, 0.5, 0.5, 0.4*$camera_zoom, 0.4*$camera_zoom, color_new)
-			
-		end
 	end
 	
 end
