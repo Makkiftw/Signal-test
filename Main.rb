@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'gosu'
-require 'ruby-prof'
+# require 'ruby-prof'
 
 include Gosu
 
