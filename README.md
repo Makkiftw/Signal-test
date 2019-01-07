@@ -6,8 +6,7 @@ The project began the 4'th January 2019.
 
 # Screenshots
 testing
-![Alt text](/(screenshot)_8bit_memory.png?raw=true "8 Bit Memory Cell")
-![Alt text](/(screenshot)_copy_paste.png?raw=true "Copy and Paste")
+![ScreenShot](https://raw.github.com/Makkiftw/Signal-test/master/(screenshot)_8bit_memory.png)
 
 # Launch
 There is no .exe file attached yet.
