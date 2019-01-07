@@ -56,6 +56,23 @@ class Lever
 			color_new = $on_color
 		end
 		
+		if $select_start != false
+			
+			
+			m_real_x = (@window.mouse_x-$window_width/2)/$camera_zoom+$camera_x
+			m_real_y = (@window.mouse_y-$window_height/2)/$camera_zoom+$camera_y
+			
+			x1 = [$select_start[0], m_real_x].min
+			y1 = [$select_start[1], m_real_y].min
+			
+			x2 = [$select_start[0], m_real_x].max
+			y2 = [$select_start[1], m_real_y].max
+			
+			if @window.point_in_rectangle(@x, @y, x1, y1, x2, y2)
+				color_new = 0xff00aaff
+			end
+		end
+		
 		col = 0xff777777
 		
 		@window.draw_quad((@x-@size)*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, (@y-@size)*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, col, (@x+@size)*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, (@y-@size)*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, col, (@x+@size)*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, (@y+@size)*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, col, (@x-@size)*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, (@y+@size)*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, col, 2)

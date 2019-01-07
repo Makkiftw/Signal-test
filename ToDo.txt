@@ -8,7 +8,7 @@
 --- memory circuit                                       ### DONE!
 --- 8 bit memory
 --- T-Flip-Flip
---- Copy Pasting
+--- Copy Pasting                                         ### DONE!
 --- Optimisation
 --- Bug-fixing
 --- User manual

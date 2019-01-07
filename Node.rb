@@ -47,6 +47,23 @@ class Node
 			color_new = $on_color
 		end
 		
+		if $select_start != false
+			
+			
+			m_real_x = (@window.mouse_x-$window_width/2)/$camera_zoom+$camera_x
+			m_real_y = (@window.mouse_y-$window_height/2)/$camera_zoom+$camera_y
+			
+			x1 = [$select_start[0], m_real_x].min
+			y1 = [$select_start[1], m_real_y].min
+			
+			x2 = [$select_start[0], m_real_x].max
+			y2 = [$select_start[1], m_real_y].max
+			
+			if @window.point_in_rectangle(@x, @y, x1, y1, x2, y2)
+				color_new = 0xff00aaff
+			end
+		end
+		
 		@window.circle_img.draw_rot(@x*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, @y*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, 2, 0, 0.5, 0.5, 1.0*$camera_zoom, 1.0*$camera_zoom, color_new)
 		
 		# @window.font.draw("#{@id}", (@x-10)*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, (@y-20)*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, 0, 1.0, 1.0, color_new)
