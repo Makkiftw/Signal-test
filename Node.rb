@@ -28,6 +28,7 @@ class Node
 	
 	def delete
 		@window.destroy_links(@id)
+		@window.destroy_leds(@id)
 		@window.destroy_levers(@id)
 		@window.destroy_node(self)
 	end
@@ -88,7 +89,7 @@ class Node
 			m_real_x = (@window.mouse_x-$window_width/2)/$camera_zoom+$camera_x
 			m_real_y = (@window.mouse_y-$window_height/2)/$camera_zoom+$camera_y
 			
-			if @window.cursor == "repeater" or @window.cursor == "inverter" or @window.cursor == "lever"
+			if @window.cursor == "repeater" or @window.cursor == "inverter" or @window.cursor == "lever" or @window.cursor == "led"
 				if @window.point_in_rectangle(m_real_x, m_real_y, @x-7, @y-7, @x+7, @y+7)
 					@window.circle_img.draw_rot(@x*$camera_zoom + cam_corelate_x, @y*$camera_zoom + cam_corelate_y, 2, 0, 0.5, 0.5, 1.0*$camera_zoom, 1.0*$camera_zoom, 0xff00ff00)
 				end

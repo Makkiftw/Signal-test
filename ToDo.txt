@@ -10,6 +10,11 @@
 --- T-Flip-Flip                                          ### DONE!
 --- Copy Pasting                                         ### DONE!
 --- Optimisation                                         ### DONE! (roughly)
---- Bug-fixing
---- User manual
+--- LEDs                                                 ### DONE!
+--- Options menu                                         ### DONE!
+
+
 --- Hotkeys
+--- Buttons (similar to levers)
+--- Ingame textfields
+--- User manual

@@ -5,9 +5,11 @@ require 'gosu'
 include Gosu
 
 require_relative 'Node.rb'
+require_relative 'Led.rb'
 require_relative 'Link.rb'
 require_relative 'Lever.rb'
 require_relative 'Textflash.rb'
+require_relative 'TextClass.rb'
 
 # ## Profile the code
 # RubyProf.start
@@ -25,39 +27,40 @@ class GameWindow < Gosu::Window
 		super(WIDTH, HEIGHT, false)
 		self.caption = TITLE
 		
+		## Window
 		$window_width = WIDTH
 		$window_height = HEIGHT
 		
+		## Camera stuff
 		$camera_x = $window_width/2
 		$camera_y = $window_height/2
 		$camera_zoom = 1.0
 		
 		## The colors used in the circuits
-		$off_color = 0xffffffff  ## White
-		$on_color = 0xffff00ff   ## Purple
+		$off_color = 0xffffffff     ## White
+		$on_color = 0xffff00ff      ## Purple
+		$led_off_color = 0xff888888 ## Gray
+		$led_on_color = 0xffffff00  ## Yellow
 		
+		## Sprites
 		@circle_img = Gosu::Image.new(self, "media/dot_img.png", true)
 		
+		## Fonts
 		@font = Gosu::Font.new(self, Gosu::default_font_name, 17)
 		@bigfont = Gosu::Font.new(self, Gosu::default_font_name, 20)
 		@smallfont = Gosu::Font.new(self, Gosu::default_font_name, 14)
 		@smallerfont = Gosu::Font.new(self, Gosu::default_font_name, 12)
 		
-		## Visual stuff
+		## Object arrays
 		$textflash = []
-		
-		## Array of nodes
 		$nodes = []
-		@node_ids = []
-		## Array of links
+		@node_ids = []  ## Used to generate unique ids for every node
 		$links = []
-		## Array of levers
 		$levers = []
+		$leds = []
 		
-		
+		## Generate map from savefile
 		ary = self.get_file_data
-		# p ary
-		
 		for i in 0..ary.length-1
 			case ary[i][0]
 				when "node"
@@ -66,19 +69,29 @@ class GameWindow < Gosu::Window
 					self.create_link(ary[i][1].to_i, ary[i][2].to_i, ary[i][3])
 				when "lever"
 					self.create_lever(ary[i][1].to_i, ary[i][2].to_i, ary[i][3].to_i, ary[i][4].to_i, ary[i][5].to_i)
+				when "led"
+					self.create_led(ary[i][1].to_i, ary[i][2].to_i, ary[i][3].to_i, ary[i][4].to_i)
 			end
 		end
 		
+		## Configurable constants
 		@update_delay_max = 2
-		@update_delay = @update_delay_max
+		@led_size = 20
+		@toggle_grid = false
+		@grid_size = 20
 		
+		## Textfields
+		@text_field1 = TextField.new(self, @bigfont, $window_width-270, $window_height-136, 6)
+		@text_field1.text = "#{@update_delay_max}"
+		@text_field2 = TextField.new(self, @bigfont, $window_width-270, $window_height-86, 6)
+		@text_field2.text = "#{@led_size}"
+		
+		## Initial constants
+		@update_delay = @update_delay_max
 		@cursor = false
 		@cursor_input = false
 		$select_start = false
 		@copy_data = false
-		
-		@toggle_grid = false
-		@grid_size = 20
 		
 	end
 	
@@ -115,6 +128,12 @@ class GameWindow < Gosu::Window
 			end
 			}
 			$levers.each   { |inst|  
+			if inst.check_if_clicked(x, y) == true
+				ary << inst
+				dists << Gosu::distance(x, y, inst.x, inst.y)
+			end
+			}
+			$leds.each     { |inst| 
 			if inst.check_if_clicked(x, y) == true
 				ary << inst
 				dists << Gosu::distance(x, y, inst.x, inst.y)
@@ -187,6 +206,11 @@ class GameWindow < Gosu::Window
 		$levers << inst
 	end
 	
+	def create_led(x, y, id, size)
+		inst = Led.new(self, x, y, id, size)
+		$leds << inst
+	end
+	
 	def create_textflash(x, y, text, camera, color, moving, size, lifetime)
 		inst = TextFlash.new(self, x, y, text, camera, color, moving, size, lifetime)
 		$textflash << inst
@@ -215,9 +239,24 @@ class GameWindow < Gosu::Window
 		$levers.delete(nil)
 	end
 	
+	def destroy_leds(id)
+		$leds.each_with_index   { |inst, i|  
+		if inst.id == id
+			$leds[i].remove_node_link
+			$leds[i] = nil
+		end
+		}
+		$leds.delete(nil)
+	end
+	
 	def destroy_node(id)
 		@node_ids.delete(id.id) ## makes sense
 		$nodes.delete(id)
+	end
+	
+	def destroy_led(id)
+		id.remove_node_link
+		$leds.delete(id)
 	end
 	
 	def destroy_lever(id)
@@ -253,6 +292,7 @@ class GameWindow < Gosu::Window
 		node_ids = []
 		copy_links = []
 		copy_levers = []
+		copy_leds = []
 		
 		for i in 0..$nodes.length-1
 			if self.point_in_rectangle($nodes[i].x, $nodes[i].y, sel_x1, sel_y1, sel_x2, sel_y2)
@@ -269,6 +309,14 @@ class GameWindow < Gosu::Window
 			end
 		end
 		
+		for i in 0..$leds.length-1
+			if self.point_in_rectangle($leds[i].x, $leds[i].y, sel_x1, sel_y1, sel_x2, sel_y2) 
+				if node_ids.include?($leds[i].id)
+					copy_leds << $leds[i]
+				end
+			end
+		end
+		
 		for i in 0..$links.length-1
 			if node_ids.include?($links[i].input_id) 
 				if node_ids.include?($links[i].output_id)
@@ -277,16 +325,17 @@ class GameWindow < Gosu::Window
 			end
 		end
 		
-		puts "copy_nodes.length #{copy_nodes.length}"
-		puts "node_ids.length #{node_ids.length}"
-		puts "copy_levers.length #{copy_levers.length}"
-		puts "copy_links.length #{copy_links.length}"
+		# puts "copy_nodes.length #{copy_nodes.length}"
+		# puts "node_ids.length #{node_ids.length}"
+		# puts "copy_levers.length #{copy_levers.length}"
+		# puts "copy_links.length #{copy_links.length}"
 		
 		if copy_nodes.empty? == false
 			
 			## The actual data that will be saved for the pasteboard. Some values need to be recalculated first.
 			data_nodes = []
 			data_levers = []
+			data_leds = []
 			data_links = []
 			
 			for i in 0..copy_nodes.length-1
@@ -314,6 +363,20 @@ class GameWindow < Gosu::Window
 				end
 			end
 			
+			if copy_leds.empty? == false
+				for i in 0..copy_leds.length-1
+					x_related = copy_leds[i].x - mid_x
+					y_related = copy_leds[i].y - mid_y
+					id_real = copy_leds[i].id
+					id_copy = node_ids.find_index(id_real)
+					value_copy = copy_leds[i].value
+					size_copy = copy_leds[i].size
+					
+					data_leds << [x_related, y_related, value_copy, id_copy, size_copy]
+					
+				end
+			end
+			
 			if copy_links.empty? == false
 				for i in 0..copy_links.length-1
 					id_input_real = copy_links[i].input_id
@@ -331,7 +394,7 @@ class GameWindow < Gosu::Window
 			self.create_textflash($window_width/2-20, 50, "Copied to pasteboard!", false, 0xffffffff, false, "big", 100)
 			
 			## @copy_data includes no instances, making it light and convenient to use, even if the instances the data represent gets deleted!
-			@copy_data = [[mid_x, mid_y], data_nodes, node_ids, data_levers, data_links]
+			@copy_data = [[mid_x, mid_y], data_nodes, node_ids, data_levers, data_links, data_leds]
 			@cursor = false
 			
 			# p @copy_data
@@ -369,7 +432,13 @@ class GameWindow < Gosu::Window
 		case id
 			when Gosu::KbEscape
 				close
+			when Gosu::KbReturn
+				self.exit_textbox
 			when Gosu::MsLeft
+				
+				### Exit current textbox
+				self.exit_textbox
+				
 				if point_in_rectangle(mouse_x, mouse_y, 7, 7, 69, 39)
 					self.create_textflash($window_width/2-20, 50, "Saved!", false, 0xffffffff, false, "big", 100)
 					
@@ -383,13 +452,30 @@ class GameWindow < Gosu::Window
 					for i in 0..$levers.length-1
 						save_text << "lever #{$levers[i].x} #{$levers[i].y} #{$levers[i].id} #{$levers[i].size} #{$levers[i].value}\n"
 					end
+					for i in 0..$leds.length-1
+						save_text << "led #{$leds[i].x} #{$leds[i].y} #{$leds[i].id} #{$leds[i].size}\n"
+					end
 					# puts save_text
 					File.open('savefile.txt', "w") {|f| f.write(save_text) }
 					@cursor = false
 					@cursor_input = false
-				elsif point_in_rectangle(mouse_x, mouse_y, 491, 7, 550, 39)
+				elsif point_in_rectangle(mouse_x, mouse_y, $window_width - 45, $window_height - 35, $window_width - 7, $window_height - 7)
+					if @cursor == "options"
+						@cursor = false
+					else
+						@cursor = "options"
+					end
+					@cursor_input = false
+				elsif point_in_rectangle(mouse_x, mouse_y, 560, 7, 620, 39)
 					@toggle_grid = !@toggle_grid
 					@cursor = false
+					@cursor_input = false
+				elsif point_in_rectangle(mouse_x, mouse_y, 459, 7, 520, 39)
+					if @cursor == "led"
+						@cursor = false
+					else
+						@cursor = "led"
+					end
 					@cursor_input = false
 				elsif point_in_rectangle(mouse_x, mouse_y, 108, 7, 177, 39)
 					if @cursor == "node"
@@ -435,7 +521,7 @@ class GameWindow < Gosu::Window
 						end
 					end
 					@cursor_input = false
-				else
+				else  ### IF YOU CLICK ANYWHERE ELSE ON THE SCREEN
 					if @cursor == "node"
 						
 						if @toggle_grid == false
@@ -546,6 +632,81 @@ class GameWindow < Gosu::Window
 							
 							@cursor_input = false
 						end
+					elsif @cursor == "led"
+						if @cursor_input == false
+							
+							
+							
+							ary = []
+							dists = []
+							x = (mouse_x-$window_width/2)/$camera_zoom+$camera_x
+							y = (mouse_y-$window_height/2)/$camera_zoom+$camera_y
+							$nodes.each   { |inst|  
+							if inst.check_if_clicked(x, y) == true
+								ary << inst
+								dists << Gosu::distance(x, y, inst.x, inst.y)
+							end
+							}
+							if dists.empty? == false
+								min_index = dists.each_with_index.min[1] ## Index of closest node
+								inst = ary[min_index] ## inst of closest node
+								
+								@cursor_input = inst
+								
+							end
+							
+						else
+							
+							if @toggle_grid == false
+								
+								x = ((mouse_x-$window_width/2)/$camera_zoom+$camera_x).round
+								y = ((mouse_y-$window_height/2)/$camera_zoom+$camera_y).round
+								
+								self.create_led(x, y, @cursor_input.id, @led_size)
+								
+							else
+								
+								m_real_x = ((mouse_x-@grid_size*$camera_zoom/2)-$window_width/2)/$camera_zoom+$camera_x
+								m_real_y = ((mouse_y-@grid_size*$camera_zoom/2)-$window_height/2)/$camera_zoom+$camera_y
+								
+								grid_x = (m_real_x*1.0/@grid_size).ceil*@grid_size
+								grid_y = (m_real_y*1.0/@grid_size).ceil*@grid_size
+								
+								self.create_led(grid_x, grid_y, @cursor_input.id, @led_size)
+								
+							end
+							
+							@cursor_input = false
+						end
+					elsif @cursor == "options"
+						
+						a = $window_width - 300
+						b = $window_height - 200
+						c = $window_width - 52
+						d = $window_height - 7
+						if point_in_rectangle(mouse_x, mouse_y, a, b, c, d)
+							
+							## Button 1
+							x1 = $window_width - 300+20
+							y1 = $window_height - 200+60
+							x2 = $window_width - 300+80
+							y2 = $window_height - 200+88
+							if point_in_rectangle(mouse_x, mouse_y, x1, y1, x2, y2)
+								self.text_input = @text_field1
+							end
+							
+							## Button 2
+							x1 = $window_width - 300+20
+							y1 = $window_height - 200+110
+							x2 = $window_width - 300+80
+							y2 = $window_height - 200+138
+							if point_in_rectangle(mouse_x, mouse_y, x1, y1, x2, y2)
+								self.text_input = @text_field2
+							end
+						else
+							@cursor = false
+						end
+						
 					elsif @cursor == "copy"
 						
 						if $select_start == false
@@ -573,6 +734,7 @@ class GameWindow < Gosu::Window
 							node_ids = @copy_data[2]
 							data_levers = @copy_data[3]
 							data_links = @copy_data[4]
+							data_leds = @copy_data[5]
 							
 							
 							mid_x = data_nodes[0][0]
@@ -619,6 +781,15 @@ class GameWindow < Gosu::Window
 								
 								self.create_lever(nx, ny, real_id, 7, data_levers[i][2])
 							end
+							for i in 0..data_leds.length-1
+								nx = data_leds[i][0] + m_real_x  ## Real
+								ny = data_leds[i][1] + m_real_y  ## Real
+								
+								copy_id = data_leds[i][3] ## The id value in the pasteboard
+								real_id = new_nodes[copy_id].id ## The real ID of the node we just created
+								
+								self.create_led(nx, ny, real_id, data_leds[i][4])
+							end
 							for i in 0..data_links.length-1
 								
 								type = data_links[i][2]
@@ -662,7 +833,20 @@ class GameWindow < Gosu::Window
 							repeater_output = inst
 							
 							if @cursor_input.id != repeater_output.id
-								self.create_link(@cursor_input.id, repeater_output.id, @cursor)
+								
+								already_linked = false
+									
+								$links.each_with_index   { |inst, i|  
+								if inst.input_id == @cursor_input.id and inst.output_id == repeater_output.id
+									
+									already_linked = true
+									
+								end
+								}
+								
+								if already_linked == false
+									self.create_link(@cursor_input.id, repeater_output.id, @cursor)
+								end
 							end
 							
 							# @cursor_input = false
@@ -713,15 +897,17 @@ class GameWindow < Gosu::Window
 			
 		end
 		
-		$nodes.each   { |inst|  inst.draw }
-		$links.each   { |inst|  inst.draw }
-		$levers.each  { |inst|  inst.draw }
+		$nodes.each     { |inst|  inst.draw }
+		$links.each     { |inst|  inst.draw }
+		$levers.each    { |inst|  inst.draw }
+		$leds.each      { |inst|  inst.draw }
 		$textflash.each { |inst|  inst.draw }
 		
-		@font.draw("@update_delay: #{@update_delay}", $window_width-150, 10, 1, 1.0, 1.0, 0xffffffff)
-		@font.draw("Nodes: #{$nodes.length}", $window_width-150, 30, 1, 1.0, 1.0, 0xffffffff)
-		@font.draw("Links: #{$links.length}", $window_width-150, 50, 1, 1.0, 1.0, 0xffffffff)
-		@font.draw("Levers: #{$levers.length}", $window_width-150, 70, 1, 1.0, 1.0, 0xffffffff)
+		@font.draw("@update_delay: #{@update_delay}", $window_width-150, 10, 6, 1.0, 1.0, 0xffffffff)
+		@font.draw("Nodes: #{$nodes.length}", $window_width-120, 30, 6, 1.0, 1.0, 0xffffffff)
+		@font.draw("Links: #{$links.length}", $window_width-120, 50, 6, 1.0, 1.0, 0xffffffff)
+		@font.draw("Levers: #{$levers.length}", $window_width-120, 70, 6, 1.0, 1.0, 0xffffffff)
+		@font.draw("Leds: #{$leds.length}", $window_width-120, 90, 6, 1.0, 1.0, 0xffffffff)
 		
 		## Save button
 		if point_in_rectangle(mouse_x, mouse_y, 7, 7, 69, 39)
@@ -734,6 +920,26 @@ class GameWindow < Gosu::Window
 		self.draw_quad(7, 7, color1, 69, 7, color1, 69, 39, color1, 7, 39, color1, 4)
 		self.draw_quad(10, 10, color2, 66, 10, color2, 66, 36, color2, 10, 36, color2, 4)
 		@bigfont.draw("Save", 16, 13, 5, 1.0, 1.0, 0xff000000)
+		
+		## Options button
+		a = $window_width - 45
+		b = $window_height - 35
+		c = $window_width - 7
+		d = $window_height - 7
+		if @cursor == "options"
+			color1 = 0xff000000
+			color2 = 0xffffff00
+		else
+			if point_in_rectangle(mouse_x, mouse_y, a, b, c, d)
+				color1 = 0xff000000
+			else
+				color1 = 0x88888888
+			end
+			color2 = 0xffffffff
+		end
+		self.draw_quad(a, b, color1, c, b, color1, c, d, color1, a, d, color1, 4)
+		self.draw_quad(a+3, b+3, color2, c-3, b+3, color2, c-3, d-3, color2, a+3, d-3, color2, 4)
+		@bigfont.draw("...", a+6, b-15, 5, 2.0, 2.0, 0xff000000)
 		
 		## Node button
 		a = 108
@@ -846,11 +1052,11 @@ class GameWindow < Gosu::Window
 		self.draw_quad(a, b, color1, c, b, color1, c, d, color1, a, d, color1, 4)
 		self.draw_quad(a+3, b+3, color2, c-3, b+3, color2, c-3, d-3, color2, a+3, d-3, color2, 4)
 		@bigfont.draw("Lever", a+9, b+6, 5, 1.0, 1.0, 0xff000000) 
+		
 		if @cursor == "lever"
 			if @cursor_input == false
 				## Do nothing
 			else
-				
 				if @toggle_grid == true
 					
 					m_real_x = ((mouse_x-@grid_size*$camera_zoom/2)-$window_width/2)/$camera_zoom+$camera_x
@@ -886,10 +1092,69 @@ class GameWindow < Gosu::Window
 			end
 		end
 		
-		## Grid button
-		a = 491
+		## LED button
+		a = 459
 		b = 7
-		c = 550
+		c = 520
+		d = 39
+		if @cursor == "led"
+			color1 = 0xff000000
+			color2 = 0xffffff00
+		else
+			if point_in_rectangle(mouse_x, mouse_y, a, b, c, d)
+				color1 = 0xff000000
+			else
+				color1 = 0x88888888
+			end
+			color2 = 0xffffffff
+		end
+		self.draw_quad(a, b, color1, c, b, color1, c, d, color1, a, d, color1, 4)
+		self.draw_quad(a+3, b+3, color2, c-3, b+3, color2, c-3, d-3, color2, a+3, d-3, color2, 4)
+		@bigfont.draw("LED", a+9, b+6, 5, 1.0, 1.0, 0xff000000)
+		
+		if @cursor == "led"
+			if @cursor_input == false
+				## Do nothing
+			else
+				if @toggle_grid == true
+					
+					m_real_x = ((mouse_x-@grid_size*$camera_zoom/2)-$window_width/2)/$camera_zoom+$camera_x
+					m_real_y = ((mouse_y-@grid_size*$camera_zoom/2)-$window_height/2)/$camera_zoom+$camera_y
+					
+					grid_x = (m_real_x*1.0/@grid_size).ceil*@grid_size
+					grid_y = (m_real_y*1.0/@grid_size).ceil*@grid_size
+					
+					mid_x = grid_x*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom
+					mid_y = grid_y*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom
+					
+					x1 = mid_x-@led_size*$camera_zoom
+					y1 = mid_y-@led_size*$camera_zoom
+					x2 = mid_x+@led_size*$camera_zoom
+					y2 = mid_y+@led_size*$camera_zoom
+					
+					self.draw_quad(x1, y1, 0xff00ff00, x2, y1, 0xff00ff00, x2, y2, 0xff00ff00, x1, y2, 0xff00ff00, 5)
+					self.draw_line(@cursor_input.x*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, @cursor_input.y*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, 0xffffffff, mid_x, mid_y, 0xffffffff, 5)
+				
+				else
+					mid_x = mouse_x
+					mid_y = mouse_y
+					
+					x1 = mid_x-@led_size*$camera_zoom
+					y1 = mid_y-@led_size*$camera_zoom
+					x2 = mid_x+@led_size*$camera_zoom
+					y2 = mid_y+@led_size*$camera_zoom
+					
+					self.draw_quad(x1, y1, 0xff00ff00, x2, y1, 0xff00ff00, x2, y2, 0xff00ff00, x1, y2, 0xff00ff00, 5)
+					self.draw_line(@cursor_input.x*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, @cursor_input.y*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, 0xffffffff, mid_x, mid_y, 0xffffffff, 5)
+				end
+				
+			end
+		end
+		
+		## Grid button
+		a = 560
+		b = 7
+		c = 620
 		d = 39
 		if point_in_rectangle(mouse_x, mouse_y, a, b, c, d)
 			color1 = 0xff000000
@@ -981,6 +1246,7 @@ class GameWindow < Gosu::Window
 			node_ids = @copy_data[2]
 			data_levers = @copy_data[3]
 			data_links = @copy_data[4]
+			data_leds = @copy_data[5]
 			
 			### Alright I've spent a lot of time trying to figure out how to paste a copied circuit onto a grid.
 			### My intention was to paste the circuit so that it sits on the grid exactly the same way it originally did when copied.
@@ -1055,6 +1321,32 @@ class GameWindow < Gosu::Window
 				
 			end
 			
+			for i in 0..data_leds.length-1
+				
+				nx = data_leds[i][0] + m_real_x  ## Real
+				ny = data_leds[i][1] + m_real_y  ## Real
+				
+				in_id = data_leds[i][3]
+				led_size = data_leds[i][4]
+				
+				if data_leds[i][2] == 0
+					color_new = 0x77ffffff
+				else
+					color_new = 0x77ff00ff
+				end
+				
+				col = 0x77777777
+		
+				self.draw_quad((nx-led_size)*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, (ny-led_size)*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, col, (nx+led_size)*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, (ny-led_size)*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, col, (nx+led_size)*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, (ny+led_size)*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, col, (nx-led_size)*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, (ny+led_size)*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, col, 5)
+				self.draw_quad((nx-(led_size-2))*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, (ny-(led_size-2))*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, color_new, (nx+(led_size-2))*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, (ny-(led_size-2))*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, color_new, (nx+(led_size-2))*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, (ny+(led_size-2))*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, color_new, (nx-(led_size-2))*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, (ny+(led_size-2))*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, color_new, 5)
+				
+				in_x = data_nodes[in_id][0] + m_real_x
+				in_y = data_nodes[in_id][1] + m_real_y
+				
+				self.draw_line(nx*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, ny*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, color_new, in_x*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, in_y*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, color_new, 5)
+				
+			end
+			
 			for i in 0..data_links.length-1  ## [id_input_copy, id_output_copy, type_copy]
 				
 				input_id = data_links[i][0]
@@ -1113,6 +1405,94 @@ class GameWindow < Gosu::Window
 			
 		end
 		
+		if @cursor == "options"
+			
+			### Button colors
+			col0 = 0xff000000  ### Black
+			col1 = 0xff888888  ### Gray
+			col2 = 0xffffffff  ### White
+			col3 = 0xffFFE470  ### Yellow
+			
+			a = $window_width - 300
+			b = $window_height - 200
+			c = $window_width - 52
+			d = $window_height - 7
+			
+			color1 = 0x88888888
+			color2 = 0xffffffff
+			
+			self.draw_quad(a, b, color1, c, b, color1, c, d, color1, a, d, color1, 5)
+			self.draw_quad(a+3, b+3, color2, c-3, b+3, color2, c-3, d-3, color2, a+3, d-3, color2, 5)
+			@bigfont.draw("Options", a+90, b+10, 5, 1.1, 1.1, 0xff000000)
+			
+			## Update Delay Textfield
+			@smallfont.draw("Update Delay", a+10, b+42, 6, 1.1, 1.1, 0xff000000)
+			@text_field1.draw
+			
+			x1 = $window_width - 300+20
+			y1 = $window_height - 200+60
+			x2 = $window_width - 300+80
+			y2 = $window_height - 200+88
+			
+			self.draw_quad(x1, y1, col1, x2, y1, col1, x2, y2, col1, x1, y2, col1, 5)
+			self.draw_quad(x1+3, y1+3, col2, x2-3, y1+3, col2, x2-3, y2-3, col2, x1+3, y2-3, col2, 5)
+			if self.text_input == @text_field1
+				self.draw_quad(x1, y1, col0, x2, y1, col0, x2, y2, col0, x1, y2, col0, 5)
+				self.draw_quad(x1+3, y1+3, col3, x2-3, y1+3, col3, x2-3, y2-3, col3, x1+3, y2-3, col3, 5)
+			end
+			
+			## LED size textfield
+			@smallfont.draw("LED size", a+10, b+92, 6, 1.1, 1.1, 0xff000000)
+			@text_field2.draw
+			
+			x1 = $window_width - 300+20
+			y1 = $window_height - 200+110
+			x2 = $window_width - 300+80
+			y2 = $window_height - 200+138
+			
+			self.draw_quad(x1, y1, col1, x2, y1, col1, x2, y2, col1, x1, y2, col1, 5)
+			self.draw_quad(x1+3, y1+3, col2, x2-3, y1+3, col2, x2-3, y2-3, col2, x1+3, y2-3, col2, 5)
+			if self.text_input == @text_field2
+				self.draw_quad(x1, y1, col0, x2, y1, col0, x2, y2, col0, x1, y2, col0, 5)
+				self.draw_quad(x1+3, y1+3, col3, x2-3, y1+3, col3, x2-3, y2-3, col3, x1+3, y2-3, col3, 5)
+			end
+			
+		end
+		
+	end
+	
+	def exit_textbox
+		### Is there an active textbox?
+		if self.text_input != nil
+			
+			### Check if the text input is a number
+			if is_number?(self.text_input.text) == true
+				
+				### Update all textboxes (only the active one is different thus making it change)
+				if @text_field1.text.to_i > 0
+					@update_delay_max = @text_field1.text.to_i
+				end
+				if @text_field2.text.to_i > 0
+					@led_size = @text_field2.text.to_i
+				end
+				
+				@text_field1.text = @update_delay_max.to_s
+				@text_field2.text = @led_size.to_s
+			else
+				## If the input is not a number, reset the text
+				@text_field1.text = @update_delay_max.to_s
+				@text_field2.text = @led_size.to_s
+				
+				
+			end
+			
+			### Close the current textbox
+			self.text_input = nil
+		end
+	end
+	
+	def is_number? string
+		true if Float(string) rescue false
 	end
 	
 	def draw_bar(x1, y1, x2, y2, z, value, color1, color2, color3, border)
