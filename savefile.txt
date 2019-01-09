@@ -209,123 +209,6 @@ node 1680 -40 1 200
 node 1700 -80 1 201
 node 1740 -20 1 202
 node 1760 -80 0 203
-node 1460 -740 0 204
-node 1460 -700 0 205
-node 1460 -660 0 206
-node 1460 -620 0 207
-node 1460 -560 0 208
-node 1460 -520 0 209
-node 1200 -740 0 210
-node 1200 -700 1 211
-node 1200 -660 1 212
-node 1200 -620 0 213
-node 1840 -340 1 221
-node 1840 -300 0 222
-node 1860 -320 1 224
-node 1880 -340 0 223
-node 1880 -300 1 225
-node 1920 -320 1 227
-node 1880 -320 0 226
-node 1840 -260 0 214
-node 1840 -220 0 215
-node 1860 -240 1 216
-node 1880 -260 1 217
-node 1880 -220 1 218
-node 1920 -240 0 219
-node 1880 -240 0 220
-node 1840 -420 1 228
-node 1840 -380 1 229
-node 1860 -400 0 230
-node 1880 -420 1 231
-node 1880 -380 1 232
-node 1920 -400 0 233
-node 1880 -400 1 234
-node 1840 -500 1 235
-node 1840 -460 1 236
-node 1860 -480 0 237
-node 1880 -500 1 238
-node 1880 -460 1 239
-node 1920 -480 0 240
-node 1880 -480 1 241
-node 1920 -340 0 242
-node 1920 -300 0 243
-node 1920 -420 1 244
-node 1920 -380 1 245
-node 1920 -500 1 246
-node 1920 -460 1 247
-node 1920 -260 0 248
-node 1920 -220 0 249
-node 1960 -420 0 250
-node 1960 -500 0 251
-node 1960 -460 0 252
-node 1960 -380 0 253
-node 1960 -340 0 254
-node 1960 -300 0 255
-node 1960 -260 0 256
-node 1960 -220 0 257
-node 1820 -900 1 274
-node 1820 -860 1 275
-node 2080 -1000 0 278
-node 1860 -880 0 319
-node 1880 -900 1 320
-node 1880 -880 1 321
-node 1880 -860 1 322
-node 1920 -880 0 324
-node 1960 -880 1 325
-node 1820 -980 1 270
-node 1820 -940 0 271
-node 1860 -960 1 272
-node 1880 -980 0 273
-node 1880 -960 0 276
-node 1880 -940 1 277
-node 1920 -960 1 294
-node 1960 -960 0 295
-node 1820 -1060 1 296
-node 1820 -1020 1 297
-node 1860 -1040 0 298
-node 1880 -1060 1 299
-node 1880 -1040 1 300
-node 1880 -1020 1 301
-node 1920 -1040 0 302
-node 1960 -1040 1 303
-node 1820 -1140 0 304
-node 1820 -1100 0 305
-node 1860 -1120 1 306
-node 1880 -1140 1 307
-node 1880 -1120 0 308
-node 1880 -1100 1 309
-node 1920 -1120 0 310
-node 1960 -1120 1 311
-node 2040 -1000 1 312
-node 2040 -1040 0 279
-node 2040 -1060 1 280
-node 2040 -1080 1 281
-node 2040 -1100 0 282
-node 2040 -1120 1 283
-node 2040 -1160 1 284
-node 2040 -1180 1 285
-node 2040 -1200 1 293
-node 2040 -1200 0 313
-node 2040 -1200 0 314
-node 2040 -1220 1 315
-node 2040 -1260 1 316
-node 2040 -1280 0 317
-node 2040 -1300 1 318
-node 2040 -1340 1 323
-node 2040 -1360 0 326
-node 2080 -1340 0 327
-node 2080 -1260 0 328
-node 2080 -1160 1 329
-node 2060 -1040 1 330
-node 2060 -1160 0 331
-node 2060 -1260 1 332
-node 2060 -1340 1 333
-node 2080 -1040 0 334
-node 2120 -1040 1 335
-node 2120 -960 0 336
-node 2080 -960 0 337
-node 2060 -960 1 338
-node 2040 -960 1 339
 node 1500 -1040 0 340
 node 1500 -999 0 341
 node 1540 -1040 1 342
@@ -345,25 +228,739 @@ node 1540 -900 0 261
 node 1540 -880 1 262
 node 1500 -880 0 263
 node 1580 -900 0 264
-node 2040 -940 0 265
-node 2040 -880 1 267
-node 2040 -860 1 268
-node 2040 -820 0 269
-node 2040 -800 0 286
-node 2040 -780 1 287
-node 2040 -760 1 288
-node 2040 -720 0 289
-node 2040 -700 1 290
-node 2040 -680 1 291
-node 2040 -660 1 292
-node 2040 -640 0 352
-node 2060 -900 1 354
-node 2080 -900 0 355
-node 2060 -820 1 356
-node 2080 -820 0 357
-node 2060 -720 1 358
-node 2080 -720 0 359
-node 2040 -900 0 266
+node 580 -1300 0 209
+node 580 -1260 1 353
+node 620 -1280 1 361
+node 640 -1300 1 362
+node 640 -1280 0 363
+node 640 -1260 0 364
+node 680 -1280 1 365
+node 580 -1380 0 367
+node 580 -1340 0 368
+node 620 -1360 1 369
+node 640 -1380 1 370
+node 640 -1360 0 371
+node 640 -1340 1 372
+node 680 -1360 0 373
+node 580 -1460 0 375
+node 580 -1420 1 376
+node 620 -1440 1 377
+node 640 -1460 1 378
+node 640 -1440 0 379
+node 640 -1420 0 380
+node 680 -1440 1 381
+node 580 -1540 0 383
+node 580 -1500 0 384
+node 620 -1520 1 385
+node 640 -1540 1 386
+node 640 -1520 0 387
+node 640 -1500 1 388
+node 680 -1520 0 389
+node 700 -1280 0 366
+node 700 -1360 1 374
+node 700 -1440 0 382
+node 700 -1520 1 390
+node 740 -1540 1 392
+node 780 -1540 0 393
+node 740 -1500 0 394
+node 740 -1480 1 395
+node 740 -1460 0 396
+node 740 -1440 1 397
+node 740 -1420 0 398
+node 740 -1380 0 399
+node 740 -1360 0 400
+node 740 -1340 0 401
+node 740 -1320 1 402
+node 740 -1280 0 403
+node 740 -1260 1 404
+node 740 -1240 0 405
+node 740 -1200 0 406
+node 740 -1180 0 407
+node 760 -1500 1 408
+node 780 -1500 0 409
+node 820 -1500 0 410
+node 820 -1540 0 411
+node 760 -1380 1 412
+node 780 -1380 0 413
+node 760 -1280 1 360
+node 780 -1280 0 391
+node 760 -1200 1 414
+node 780 -1200 0 415
+node 1320 -1280 0 424
+node 1320 -1320 0 425
+node 1360 -1320 1 426
+node 1360 -1280 1 427
+node 1380 -1300 1 428
+node 1380 -1320 0 429
+node 1380 -1340 1 430
+node 1420 -1320 0 431
+node 1220 -1240 0 432
+node 1220 -1280 0 433
+node 1260 -1280 1 434
+node 1260 -1240 1 435
+node 1280 -1260 1 436
+node 1280 -1280 0 437
+node 1280 -1300 1 438
+node 1320 -1200 0 416
+node 1320 -1240 0 417
+node 1360 -1240 1 418
+node 1360 -1200 1 419
+node 1380 -1220 1 420
+node 1380 -1240 0 421
+node 1380 -1260 1 422
+node 1420 -1240 0 423
+node 1220 -1160 0 439
+node 1220 -1200 0 440
+node 1260 -1200 1 441
+node 1260 -1160 1 442
+node 1280 -1180 1 443
+node 1280 -1200 0 444
+node 1280 -1220 1 445
+node 1320 -1120 0 446
+node 1320 -1160 0 447
+node 1360 -1160 1 448
+node 1360 -1120 1 449
+node 1380 -1140 1 450
+node 1380 -1160 0 451
+node 1380 -1180 1 452
+node 1420 -1160 0 453
+node 1220 -1080 0 454
+node 1220 -1120 0 455
+node 1260 -1120 1 456
+node 1260 -1080 1 457
+node 1280 -1100 1 458
+node 1280 -1120 0 459
+node 1280 -1140 1 460
+node 1320 -1360 0 461
+node 1320 -1400 0 462
+node 1360 -1400 1 463
+node 1360 -1360 1 464
+node 1380 -1380 1 465
+node 1380 -1400 0 466
+node 1380 -1420 1 467
+node 1420 -1400 0 468
+node 1220 -1320 0 469
+node 1220 -1360 0 470
+node 1260 -1360 1 471
+node 1260 -1320 1 472
+node 1280 -1340 1 473
+node 1280 -1360 0 474
+node 1280 -1380 1 475
+node 1420 -1080 0 476
+node 3220 -640 1 542
+node 3220 -680 0 543
+node 3260 -680 1 544
+node 3260 -640 1 545
+node 3280 -660 0 546
+node 3280 -680 0 547
+node 3280 -700 1 548
+node 3320 -680 1 549
+node 3120 -600 0 550
+node 3120 -640 1 551
+node 3160 -640 1 552
+node 3160 -600 1 553
+node 3180 -620 1 554
+node 3180 -640 0 555
+node 3180 -660 0 556
+node 3220 -560 0 557
+node 3220 -600 0 558
+node 3260 -600 1 559
+node 3260 -560 1 560
+node 3280 -580 1 561
+node 3280 -600 0 562
+node 3280 -620 1 563
+node 3320 -600 0 564
+node 3120 -520 0 565
+node 3120 -560 0 566
+node 3160 -560 1 567
+node 3160 -520 1 568
+node 3180 -540 1 569
+node 3180 -560 0 570
+node 3180 -580 1 571
+node 3220 -480 0 572
+node 3220 -520 0 573
+node 3260 -520 1 574
+node 3260 -480 1 575
+node 3280 -500 1 576
+node 3280 -520 0 577
+node 3280 -540 1 578
+node 3320 -520 0 579
+node 3120 -440 0 580
+node 3120 -480 0 581
+node 3160 -480 1 582
+node 3160 -440 1 583
+node 3180 -460 1 584
+node 3180 -480 0 585
+node 3180 -500 1 586
+node 3320 -440 0 602
+node 2760 -720 0 500
+node 2760 -640 1 501
+node 2760 -560 0 502
+node 2760 -480 0 503
+node 2840 -400 0 477
+node 2840 -360 0 478
+node 2880 -380 1 479
+node 2900 -400 1 480
+node 2900 -380 0 481
+node 2900 -360 1 482
+node 2940 -380 0 483
+node 2840 -480 0 484
+node 2840 -440 1 485
+node 2880 -460 1 486
+node 2900 -480 1 487
+node 2900 -460 0 488
+node 2900 -440 0 489
+node 2940 -460 1 490
+node 2840 -560 0 491
+node 2840 -520 0 492
+node 2880 -540 1 493
+node 2900 -560 1 494
+node 2900 -540 0 495
+node 2900 -520 1 496
+node 2940 -540 0 497
+node 2840 -600 0 504
+node 2960 -380 1 513
+node 2960 -460 0 514
+node 2960 -540 1 515
+node 3000 -600 1 519
+node 3000 -580 1 520
+node 3000 -560 1 521
+node 3000 -540 0 522
+node 3000 -520 1 523
+node 3000 -480 0 524
+node 3000 -460 1 525
+node 3000 -440 1 526
+node 3000 -420 0 529
+node 3000 -380 0 530
+node 3000 -360 0 531
+node 3000 -340 1 533
+node 3000 -300 0 540
+node 3000 -280 1 541
+node 3020 -600 1 645
+node 3040 -600 0 646
+node 3020 -480 1 647
+node 3040 -480 0 648
+node 3020 -380 1 649
+node 3040 -380 0 650
+node 3020 -300 1 651
+node 3040 -300 0 652
+node 2840 -640 1 499
+node 3080 -580 0 505
+node 3320 -760 0 506
+node 3740 -760 0 511
+node 3740 -800 0 512
+node 3780 -800 1 516
+node 3780 -760 1 517
+node 3800 -780 1 518
+node 3800 -800 0 587
+node 3800 -820 1 588
+node 3840 -800 0 589
+node 3640 -720 0 590
+node 3640 -760 0 591
+node 3680 -760 1 592
+node 3680 -720 1 593
+node 3700 -740 1 594
+node 3700 -760 0 595
+node 3700 -780 1 596
+node 3740 -680 1 597
+node 3740 -720 0 598
+node 3780 -720 1 599
+node 3780 -680 1 600
+node 3800 -700 0 601
+node 3800 -720 0 653
+node 3800 -740 1 654
+node 3840 -720 1 655
+node 3640 -640 0 656
+node 3640 -680 1 657
+node 3680 -680 1 658
+node 3680 -640 1 659
+node 3700 -660 1 660
+node 3700 -680 0 661
+node 3700 -700 0 662
+node 3740 -600 0 663
+node 3740 -640 0 664
+node 3780 -640 1 665
+node 3780 -600 1 666
+node 3800 -620 1 667
+node 3800 -640 0 668
+node 3800 -660 1 669
+node 3840 -640 0 670
+node 3640 -600 0 672
+node 3680 -600 1 673
+node 3680 -560 1 674
+node 3700 -580 1 675
+node 3700 -600 0 676
+node 3700 -620 1 677
+node 3360 -520 0 679
+node 3360 -480 0 680
+node 3400 -500 1 681
+node 3420 -520 1 682
+node 3420 -500 0 683
+node 3420 -480 1 684
+node 3460 -500 0 685
+node 3360 -600 0 686
+node 3360 -560 1 687
+node 3400 -580 1 688
+node 3420 -600 1 689
+node 3420 -580 0 690
+node 3420 -560 0 691
+node 3460 -580 1 692
+node 3360 -680 1 693
+node 3360 -640 0 694
+node 3400 -660 1 695
+node 3420 -680 0 696
+node 3420 -660 0 697
+node 3420 -640 1 698
+node 3460 -660 1 699
+node 3360 -720 0 700
+node 3480 -500 1 701
+node 3480 -580 0 702
+node 3480 -660 0 703
+node 3520 -720 0 704
+node 3520 -700 1 705
+node 3520 -680 1 706
+node 3520 -660 0 707
+node 3520 -640 0 708
+node 3520 -600 1 709
+node 3520 -580 1 710
+node 3520 -560 1 711
+node 3520 -540 0 712
+node 3520 -500 0 713
+node 3520 -480 0 714
+node 3520 -460 1 715
+node 3520 -420 0 716
+node 3520 -400 1 717
+node 3540 -720 1 718
+node 3560 -720 0 719
+node 3540 -600 1 720
+node 3560 -600 0 721
+node 3540 -500 1 722
+node 3560 -500 0 723
+node 3540 -420 1 724
+node 3560 -420 0 725
+node 3360 -760 0 726
+node 3600 -700 0 727
+node 3640 -560 0 671
+node 3640 -520 0 731
+node 3680 -520 1 732
+node 3680 -480 1 733
+node 3700 -500 1 734
+node 3700 -520 0 735
+node 3700 -540 1 736
+node 3640 -480 0 737
+node 3840 -560 0 678
+node 3740 -560 0 730
+node 3780 -560 1 738
+node 3780 -520 1 739
+node 3800 -540 1 740
+node 3800 -560 0 741
+node 3800 -580 1 742
+node 3740 -520 0 743
+node 2760 -880 0 204
+node 4260 -880 0 205
+node 4260 -920 0 206
+node 4300 -920 1 207
+node 4300 -880 1 208
+node 4320 -900 1 210
+node 4320 -920 0 211
+node 4320 -940 1 212
+node 4360 -920 0 213
+node 4160 -840 1 498
+node 4160 -880 1 508
+node 4200 -880 0 509
+node 4200 -840 0 510
+node 4220 -860 1 527
+node 4220 -880 1 528
+node 4220 -900 1 603
+node 4260 -800 1 604
+node 4260 -840 1 605
+node 4300 -840 0 606
+node 4300 -800 0 607
+node 4320 -820 1 608
+node 4320 -840 1 609
+node 4320 -860 1 610
+node 4360 -840 0 611
+node 4160 -760 1 612
+node 4160 -800 0 613
+node 4200 -800 1 614
+node 4200 -760 1 615
+node 4220 -780 0 616
+node 4220 -800 0 617
+node 4220 -820 1 618
+node 4260 -720 1 619
+node 4260 -760 1 620
+node 4300 -760 0 621
+node 4300 -720 0 622
+node 4320 -740 1 623
+node 4320 -760 1 624
+node 4320 -780 1 625
+node 4360 -760 0 626
+node 4160 -720 1 627
+node 4200 -720 1 628
+node 4200 -680 1 629
+node 4220 -700 1 630
+node 4220 -720 0 631
+node 4220 -740 0 632
+node 3879 -640 0 633
+node 3879 -600 0 634
+node 3919 -620 1 635
+node 3939 -640 1 636
+node 3939 -620 0 637
+node 3939 -600 1 638
+node 3979 -620 0 639
+node 3879 -720 1 640
+node 3879 -680 1 641
+node 3919 -700 0 642
+node 3939 -720 1 643
+node 3939 -700 1 644
+node 3939 -680 1 744
+node 3979 -700 0 745
+node 3879 -800 0 746
+node 3879 -760 0 747
+node 3919 -780 1 748
+node 3939 -800 1 749
+node 3939 -780 0 750
+node 3939 -760 1 751
+node 3979 -780 0 752
+node 3879 -840 0 753
+node 3999 -620 1 754
+node 3999 -700 1 755
+node 3999 -780 1 756
+node 4039 -840 1 757
+node 4039 -820 1 758
+node 4039 -800 1 759
+node 4039 -780 1 760
+node 4039 -760 1 761
+node 4039 -720 0 762
+node 4039 -700 1 763
+node 4039 -680 1 764
+node 4039 -660 1 765
+node 4039 -620 1 766
+node 4039 -600 0 767
+node 4059 -840 0 768
+node 4079 -840 1 769
+node 4059 -720 1 770
+node 4079 -720 0 771
+node 4059 -620 1 772
+node 4079 -620 0 773
+node 3879 -880 1 774
+node 4120 -820 1 775
+node 4360 -600 0 776
+node 4160 -680 0 777
+node 4160 -640 0 778
+node 4200 -640 1 779
+node 4200 -600 1 780
+node 4220 -620 1 781
+node 4220 -640 0 782
+node 4220 -660 1 783
+node 4160 -600 0 784
+node 4360 -680 1 785
+node 4260 -680 1 786
+node 4300 -680 1 787
+node 4300 -640 1 788
+node 4320 -660 1 789
+node 4320 -680 0 790
+node 4320 -700 0 791
+node 4260 -640 0 792
+node 4360 -520 0 793
+node 4360 -1000 0 794
+node 3840 -960 0 795
+node 3320 -840 1 796
+node 2760 -800 1 507
+node 4360 -440 0 798
+node 4040 -580 1 799
+node 4040 -520 1 800
+node 4040 -540 0 801
+node 4060 -540 1 802
+node 4080 -540 0 803
+node 3020 -900 0 797
+node 3320 -920 0 804
+node 3560 -940 0 805
+node 4500 -1060 0 313
+node 4520 -1060 0 314
+node 4560 -1060 0 315
+node 4580 -1060 0 316
+node 4600 -1060 1 317
+node 4620 -1060 0 318
+node 4540 -1060 1 319
+node 4500 -1020 0 321
+node 4520 -1020 1 322
+node 4540 -1020 1 323
+node 4560 -1020 1 324
+node 4580 -1020 1 325
+node 4600 -1020 1 326
+node 4620 -1020 1 327
+node 4640 -1020 1 328
+node 4660 -1020 1 329
+node 4460 -1000 1 330
+node 4440 -1000 1 331
+node 4440 -980 0 332
+node 4420 -1000 0 333
+node 4420 -980 1 334
+node 4400 -1000 1 335
+node 4400 -980 1 336
+node 4460 -920 0 337
+node 4440 -920 0 338
+node 4440 -900 1 339
+node 4420 -920 1 352
+node 4420 -900 0 354
+node 4400 -920 0 355
+node 4400 -900 1 356
+node 4460 -840 0 357
+node 4440 -840 0 358
+node 4440 -820 1 359
+node 4420 -840 1 813
+node 4420 -820 0 814
+node 4400 -840 0 815
+node 4400 -820 1 816
+node 4460 -760 0 817
+node 4440 -760 0 818
+node 4440 -740 1 819
+node 4420 -760 1 820
+node 4420 -740 0 821
+node 4400 -760 0 822
+node 4400 -740 1 823
+node 4480 -1040 0 824
+node 4500 -1040 1 825
+node 4520 -1040 0 826
+node 4540 -1040 0 827
+node 4560 -1040 0 828
+node 4580 -1040 0 829
+node 4600 -1040 0 830
+node 4620 -1040 0 831
+node 4640 -1040 0 832
+node 4660 -1040 0 833
+node 4740 -1060 1 834
+node 4760 -1060 1 835
+node 4800 -1060 0 836
+node 4820 -1060 1 837
+node 4840 -1060 1 838
+node 4860 -1060 1 839
+node 4780 -1060 1 840
+node 4720 -1020 0 841
+node 4740 -1020 1 842
+node 4760 -1020 1 843
+node 4780 -1020 1 844
+node 4800 -1020 1 845
+node 4820 -1020 1 846
+node 4840 -1020 1 847
+node 4860 -1020 1 848
+node 4880 -1020 1 849
+node 4900 -1020 1 850
+node 4700 -1000 0 851
+node 4680 -1000 0 852
+node 4680 -980 1 853
+node 4660 -1000 1 854
+node 4660 -980 0 855
+node 4640 -1000 0 856
+node 4640 -980 1 857
+node 4700 -920 0 858
+node 4680 -920 0 859
+node 4680 -900 1 860
+node 4660 -920 1 861
+node 4660 -900 0 862
+node 4640 -920 0 863
+node 4640 -900 1 864
+node 4700 -840 0 865
+node 4680 -840 0 866
+node 4680 -820 1 867
+node 4660 -840 1 868
+node 4660 -820 0 869
+node 4640 -840 0 870
+node 4640 -820 1 871
+node 4700 -760 0 872
+node 4680 -760 0 873
+node 4680 -740 1 874
+node 4660 -760 1 875
+node 4660 -740 0 876
+node 4640 -760 0 877
+node 4640 -740 1 878
+node 4720 -1040 1 879
+node 4740 -1040 0 880
+node 4760 -1040 0 881
+node 4780 -1040 0 882
+node 4800 -1040 0 883
+node 4820 -1040 0 884
+node 4840 -1040 0 885
+node 4860 -1040 0 886
+node 4880 -1040 0 887
+node 4900 -1040 0 888
+node 4540 -600 1 889
+node 4540 -560 0 907
+node 2840 -220 0 908
+node 2820 -200 1 909
+node 2860 -200 0 910
+node 2860 -180 1 911
+node 2820 -180 1 912
+node 2800 -200 1 913
+node 2800 -180 1 914
+node 2880 -200 0 915
+node 2880 -180 0 916
+node 2820 -160 0 917
+node 2860 -160 0 918
+node 2840 -140 0 919
+node 2940 -220 0 920
+node 2920 -200 1 921
+node 2960 -200 0 922
+node 2960 -180 1 923
+node 2920 -180 1 924
+node 2900 -200 1 925
+node 2900 -180 1 926
+node 2980 -200 0 927
+node 2980 -180 0 928
+node 2920 -160 0 929
+node 2960 -160 0 930
+node 2940 -140 0 931
+node 3040 -220 1 932
+node 3020 -200 0 933
+node 3060 -200 1 934
+node 3060 -180 1 935
+node 3020 -180 1 936
+node 3000 -200 0 937
+node 3000 -180 0 938
+node 3080 -200 1 939
+node 3080 -180 1 940
+node 3020 -160 0 941
+node 3060 -160 0 942
+node 3040 -140 0 943
+node 3140 -220 0 944
+node 3120 -200 1 945
+node 3160 -200 0 946
+node 3160 -180 1 947
+node 3120 -180 1 948
+node 3100 -200 1 949
+node 3100 -180 1 950
+node 3180 -200 0 951
+node 3180 -180 0 952
+node 3120 -160 0 953
+node 3160 -160 0 954
+node 3140 -140 0 955
+node 3240 -220 1 956
+node 3220 -200 0 957
+node 3260 -200 1 958
+node 3260 -180 1 959
+node 3220 -180 1 960
+node 3200 -200 0 961
+node 3200 -180 0 962
+node 3280 -200 1 963
+node 3280 -180 1 964
+node 3220 -160 0 965
+node 3260 -160 0 966
+node 3240 -140 0 967
+node 3340 -220 0 968
+node 3320 -200 1 969
+node 3360 -200 0 970
+node 3360 -180 1 971
+node 3320 -180 1 972
+node 3300 -200 1 973
+node 3300 -180 1 974
+node 3380 -200 0 975
+node 3380 -180 0 976
+node 3320 -160 0 977
+node 3360 -160 0 978
+node 3340 -140 0 979
+node 4540 -360 0 890
+node 4540 -380 0 891
+node 4560 -380 0 892
+node 4560 -360 0 893
+node 4580 -360 0 894
+node 4580 -380 0 895
+node 4600 -380 0 896
+node 4600 -360 0 897
+node 4620 -360 0 898
+node 4620 -380 0 899
+node 4640 -380 0 900
+node 4640 -360 0 901
+node 4660 -360 0 902
+node 4660 -380 0 903
+node 4680 -380 0 904
+node 4680 -360 0 905
+node 4700 -360 0 906
+node 4700 -380 0 980
+node 4720 -380 0 981
+node 4720 -360 0 982
+node 4740 -360 0 983
+node 4740 -380 0 984
+node 4760 -380 0 985
+node 4760 -360 0 986
+node 3340 -440 0 987
+node 3360 -440 0 988
+node 3380 -440 0 989
+node 3820 -460 0 729
+node 4740 -400 0 990
+node 4740 -420 0 991
+node 4740 -440 0 992
+node 4740 -460 0 993
+node 4740 -480 0 994
+node 4740 -500 0 995
+node 4760 -500 0 996
+node 4760 -480 0 997
+node 4760 -460 0 998
+node 4760 -440 0 999
+node 4760 -420 0 1000
+node 4760 -400 0 1001
+node 4740 -520 0 1002
+node 4760 -520 0 1003
+node 4740 -540 0 1004
+node 4760 -540 0 1005
+node 1200 -520 1 1006
+node 1220 -520 1 1007
+node 1260 -520 0 1008
+node 1280 -520 1 1009
+node 1300 -520 1 1010
+node 1320 -520 1 1011
+node 1240 -520 1 1012
+node 1180 -480 0 1013
+node 1200 -480 1 1014
+node 1220 -480 1 1015
+node 1240 -480 1 1016
+node 1260 -480 1 1017
+node 1280 -480 1 1018
+node 1300 -480 1 1019
+node 1320 -480 1 1020
+node 1340 -480 1 1021
+node 1360 -480 1 1022
+node 1160 -460 0 1023
+node 1140 -460 0 1024
+node 1140 -440 1 1025
+node 1120 -460 1 1026
+node 1120 -440 0 1027
+node 1100 -460 0 1028
+node 1100 -440 1 1029
+node 1160 -380 0 1030
+node 1140 -380 0 1031
+node 1140 -360 1 1032
+node 1120 -380 1 1033
+node 1120 -360 0 1034
+node 1100 -380 0 1035
+node 1100 -360 1 1036
+node 1160 -300 0 1037
+node 1140 -300 0 1038
+node 1140 -280 1 1039
+node 1120 -300 1 1040
+node 1120 -280 0 1041
+node 1100 -300 0 1042
+node 1100 -280 1 1043
+node 1160 -220 0 1044
+node 1140 -220 0 1045
+node 1140 -200 1 1046
+node 1120 -220 1 1047
+node 1120 -200 0 1048
+node 1100 -220 0 1049
+node 1100 -200 1 1050
+node 1180 -500 1 1051
+node 1200 -500 0 1052
+node 1220 -500 0 1053
+node 1240 -500 0 1054
+node 1260 -500 0 1055
+node 1280 -500 0 1056
+node 1300 -500 0 1057
+node 1320 -500 0 1058
+node 1340 -500 0 1059
+node 1360 -500 0 1060
+node 3800 -880 1 214
+node 3820 -880 1 215
+node 3840 -880 1 216
 link 0 1 repeater
 link 1 2 repeater
 link 2 3 repeater
@@ -672,136 +1269,6 @@ link 142 151 inverter
 link 123 151 inverter
 link 157 196 inverter
 link 149 196 inverter
-link 210 204 repeater
-link 221 224 inverter
-link 222 224 inverter
-link 221 223 inverter
-link 222 225 inverter
-link 223 227 inverter
-link 225 227 inverter
-link 226 223 repeater
-link 226 225 repeater
-link 224 226 inverter
-link 214 216 inverter
-link 215 216 inverter
-link 214 217 inverter
-link 215 218 inverter
-link 217 219 inverter
-link 218 219 inverter
-link 220 217 repeater
-link 220 218 repeater
-link 216 220 inverter
-link 228 230 inverter
-link 229 230 inverter
-link 228 231 inverter
-link 229 232 inverter
-link 231 233 inverter
-link 232 233 inverter
-link 234 231 repeater
-link 234 232 repeater
-link 230 234 inverter
-link 235 237 inverter
-link 236 237 inverter
-link 235 238 inverter
-link 236 239 inverter
-link 238 240 inverter
-link 239 240 inverter
-link 241 238 repeater
-link 241 239 repeater
-link 237 241 inverter
-link 228 244 inverter
-link 233 244 inverter
-link 235 246 inverter
-link 240 246 inverter
-link 246 251 inverter
-link 244 250 inverter
-link 236 247 inverter
-link 240 247 inverter
-link 247 252 inverter
-link 229 245 inverter
-link 233 245 inverter
-link 245 253 inverter
-link 319 321 inverter
-link 321 320 repeater
-link 321 322 repeater
-link 320 324 inverter
-link 322 324 inverter
-link 324 325 inverter
-link 275 319 inverter
-link 275 322 inverter
-link 274 319 inverter
-link 274 320 inverter
-link 272 276 inverter
-link 276 273 repeater
-link 276 277 repeater
-link 273 294 inverter
-link 277 294 inverter
-link 294 295 inverter
-link 271 272 inverter
-link 271 277 inverter
-link 270 272 inverter
-link 270 273 inverter
-link 298 300 inverter
-link 300 299 repeater
-link 300 301 repeater
-link 299 302 inverter
-link 301 302 inverter
-link 302 303 inverter
-link 297 298 inverter
-link 297 301 inverter
-link 296 298 inverter
-link 296 299 inverter
-link 306 308 inverter
-link 308 307 repeater
-link 308 309 repeater
-link 307 310 inverter
-link 309 310 inverter
-link 310 311 inverter
-link 305 306 inverter
-link 305 309 inverter
-link 304 306 inverter
-link 304 307 inverter
-link 311 312 inverter
-link 303 312 inverter
-link 295 312 inverter
-link 325 312 inverter
-link 312 278 inverter
-link 334 335 repeater
-link 329 335 repeater
-link 328 335 repeater
-link 327 335 repeater
-link 333 327 inverter
-link 332 328 inverter
-link 331 329 inverter
-link 330 334 inverter
-link 279 330 inverter
-link 280 330 inverter
-link 281 330 inverter
-link 282 330 inverter
-link 283 330 inverter
-link 284 331 inverter
-link 285 331 inverter
-link 293 331 inverter
-link 315 331 inverter
-link 316 332 inverter
-link 317 332 inverter
-link 318 332 inverter
-link 323 333 inverter
-link 326 333 inverter
-link 305 323 inverter
-link 304 326 repeater
-link 296 318 repeater
-link 297 317 inverter
-link 311 316 repeater
-link 270 315 repeater
-link 271 293 inverter
-link 303 284 repeater
-link 311 285 repeater
-link 311 281 repeater
-link 303 280 repeater
-link 295 279 repeater
-link 274 283 repeater
-link 275 282 inverter
 link 340 342 inverter
 link 341 343 inverter
 link 342 344 inverter
@@ -824,42 +1291,1259 @@ link 261 260 repeater
 link 261 262 repeater
 link 260 264 inverter
 link 262 264 inverter
-link 337 336 repeater
-link 338 337 inverter
+link 361 363 inverter
+link 363 362 repeater
+link 363 364 repeater
+link 362 365 inverter
+link 364 365 inverter
+link 353 361 inverter
+link 353 364 inverter
+link 209 361 inverter
+link 209 362 inverter
+link 369 371 inverter
+link 371 370 repeater
+link 371 372 repeater
+link 370 373 inverter
+link 372 373 inverter
+link 368 369 inverter
+link 368 372 inverter
+link 367 369 inverter
+link 367 370 inverter
+link 377 379 inverter
+link 379 378 repeater
+link 379 380 repeater
+link 378 381 inverter
+link 380 381 inverter
+link 376 377 inverter
+link 376 380 inverter
+link 375 377 inverter
+link 375 378 inverter
+link 385 387 inverter
+link 387 386 repeater
+link 387 388 repeater
+link 386 389 inverter
+link 388 389 inverter
+link 384 385 inverter
+link 384 388 inverter
+link 383 385 inverter
+link 383 386 inverter
+link 393 411 repeater
+link 410 411 repeater
+link 409 410 repeater
+link 413 410 repeater
+link 391 410 repeater
+link 415 410 repeater
+link 408 409 inverter
+link 392 393 inverter
+link 390 392 inverter
+link 389 390 inverter
+link 381 382 inverter
+link 373 374 inverter
+link 365 366 inverter
+link 382 392 inverter
+link 374 392 inverter
+link 366 392 inverter
+link 394 408 inverter
+link 395 408 inverter
+link 396 408 inverter
+link 397 408 inverter
+link 398 408 inverter
+link 412 413 inverter
+link 399 412 inverter
+link 400 412 inverter
+link 401 412 inverter
+link 402 412 inverter
+link 360 391 inverter
+link 403 360 inverter
+link 404 360 inverter
+link 405 360 inverter
+link 414 415 inverter
+link 406 414 inverter
+link 407 414 inverter
+link 209 406 repeater
+link 367 403 repeater
+link 375 399 repeater
+link 383 394 repeater
+link 384 395 inverter
+link 376 400 inverter
+link 368 404 inverter
+link 353 407 inverter
+link 366 405 repeater
+link 366 401 repeater
+link 366 396 repeater
+link 374 397 repeater
+link 374 402 repeater
+link 382 398 repeater
+link 425 426 inverter
+link 425 427 inverter
+link 424 426 inverter
+link 424 427 inverter
+link 425 430 inverter
+link 424 428 inverter
+link 426 429 inverter
+link 430 431 inverter
+link 428 431 inverter
+link 429 430 repeater
+link 429 428 repeater
+link 433 434 inverter
+link 433 435 inverter
+link 432 434 inverter
+link 432 435 inverter
+link 433 438 inverter
+link 432 436 inverter
+link 434 437 inverter
+link 437 438 repeater
+link 437 436 repeater
+link 438 424 inverter
+link 436 424 inverter
+link 417 418 inverter
+link 417 419 inverter
+link 416 418 inverter
+link 416 419 inverter
+link 417 422 inverter
+link 416 420 inverter
+link 418 421 inverter
+link 422 423 inverter
+link 420 423 inverter
+link 421 422 repeater
+link 421 420 repeater
+link 440 441 inverter
+link 440 442 inverter
+link 439 441 inverter
+link 439 442 inverter
+link 440 445 inverter
+link 439 443 inverter
+link 441 444 inverter
+link 444 445 repeater
+link 444 443 repeater
+link 445 416 inverter
+link 443 416 inverter
+link 447 448 inverter
+link 447 449 inverter
+link 446 448 inverter
+link 446 449 inverter
+link 447 452 inverter
+link 446 450 inverter
+link 448 451 inverter
+link 452 453 inverter
+link 450 453 inverter
+link 451 452 repeater
+link 451 450 repeater
+link 455 456 inverter
+link 455 457 inverter
+link 454 456 inverter
+link 454 457 inverter
+link 455 460 inverter
+link 454 458 inverter
+link 456 459 inverter
+link 459 460 repeater
+link 459 458 repeater
+link 460 446 inverter
+link 458 446 inverter
+link 462 463 inverter
+link 462 464 inverter
+link 461 463 inverter
+link 461 464 inverter
+link 462 467 inverter
+link 461 465 inverter
+link 463 466 inverter
+link 467 468 inverter
+link 465 468 inverter
+link 466 467 repeater
+link 466 465 repeater
+link 470 471 inverter
+link 470 472 inverter
+link 469 471 inverter
+link 469 472 inverter
+link 470 475 inverter
+link 469 473 inverter
+link 471 474 inverter
+link 474 475 repeater
+link 474 473 repeater
+link 475 461 inverter
+link 473 461 inverter
+link 464 425 inverter
+link 472 425 inverter
+link 427 417 inverter
+link 435 417 inverter
+link 419 447 inverter
+link 442 447 inverter
+link 449 476 inverter
+link 457 476 inverter
+link 543 544 inverter
+link 543 545 inverter
+link 542 544 inverter
+link 542 545 inverter
+link 543 548 inverter
+link 542 546 inverter
+link 544 547 inverter
+link 548 549 inverter
+link 546 549 inverter
+link 547 548 repeater
+link 547 546 repeater
+link 551 552 inverter
+link 551 553 inverter
+link 550 552 inverter
+link 550 553 inverter
+link 551 556 inverter
+link 550 554 inverter
+link 552 555 inverter
+link 555 556 repeater
+link 555 554 repeater
+link 556 542 inverter
+link 554 542 inverter
+link 558 559 inverter
+link 558 560 inverter
+link 557 559 inverter
+link 557 560 inverter
+link 558 563 inverter
+link 557 561 inverter
+link 559 562 inverter
+link 563 564 inverter
+link 561 564 inverter
+link 562 563 repeater
+link 562 561 repeater
+link 566 567 inverter
+link 566 568 inverter
+link 565 567 inverter
+link 565 568 inverter
+link 566 571 inverter
+link 565 569 inverter
+link 567 570 inverter
+link 570 571 repeater
+link 570 569 repeater
+link 571 557 inverter
+link 569 557 inverter
+link 573 574 inverter
+link 573 575 inverter
+link 572 574 inverter
+link 572 575 inverter
+link 573 578 inverter
+link 572 576 inverter
+link 574 577 inverter
+link 578 579 inverter
+link 576 579 inverter
+link 577 578 repeater
+link 577 576 repeater
+link 581 582 inverter
+link 581 583 inverter
+link 580 582 inverter
+link 580 583 inverter
+link 581 586 inverter
+link 580 584 inverter
+link 582 585 inverter
+link 585 586 repeater
+link 585 584 repeater
+link 586 572 inverter
+link 584 572 inverter
+link 545 558 inverter
+link 553 558 inverter
+link 560 573 inverter
+link 568 573 inverter
+link 575 602 inverter
+link 583 602 inverter
+link 501 551 repeater
+link 502 566 repeater
+link 503 581 repeater
+link 479 481 inverter
+link 481 480 repeater
+link 481 482 repeater
+link 480 483 inverter
+link 482 483 inverter
+link 478 479 inverter
+link 478 482 inverter
+link 477 479 inverter
+link 477 480 inverter
+link 486 488 inverter
+link 488 487 repeater
+link 488 489 repeater
+link 487 490 inverter
+link 489 490 inverter
+link 485 486 inverter
+link 485 489 inverter
+link 484 486 inverter
+link 484 487 inverter
+link 493 495 inverter
+link 495 494 repeater
+link 495 496 repeater
+link 494 497 inverter
+link 496 497 inverter
+link 492 493 inverter
+link 492 496 inverter
+link 491 493 inverter
+link 491 494 inverter
+link 645 646 inverter
+link 497 515 inverter
+link 490 514 inverter
+link 483 513 inverter
+link 519 645 inverter
+link 520 645 inverter
+link 521 645 inverter
+link 522 645 inverter
+link 523 645 inverter
+link 647 648 inverter
+link 524 647 inverter
+link 525 647 inverter
+link 526 647 inverter
+link 529 647 inverter
+link 649 650 inverter
+link 530 649 inverter
+link 531 649 inverter
+link 533 649 inverter
+link 651 652 inverter
+link 540 651 inverter
+link 541 651 inverter
+link 477 540 repeater
+link 484 530 repeater
+link 491 524 repeater
+link 504 520 inverter
+link 492 525 inverter
+link 485 531 inverter
+link 478 541 inverter
+link 513 533 repeater
+link 513 526 repeater
+link 513 521 repeater
+link 514 522 repeater
+link 514 529 repeater
+link 515 523 repeater
+link 502 491 repeater
+link 503 484 repeater
+link 501 499 repeater
+link 499 519 repeater
+link 646 505 repeater
+link 648 505 repeater
+link 650 505 repeater
+link 652 505 repeater
+link 505 550 repeater
+link 505 565 repeater
+link 500 506 repeater
+link 512 516 inverter
+link 512 517 inverter
+link 511 516 inverter
+link 511 517 inverter
+link 512 588 inverter
+link 511 518 inverter
+link 516 587 inverter
+link 588 589 inverter
+link 518 589 inverter
+link 587 588 repeater
+link 587 518 repeater
+link 591 592 inverter
+link 591 593 inverter
+link 590 592 inverter
+link 590 593 inverter
+link 591 596 inverter
+link 590 594 inverter
+link 592 595 inverter
+link 595 596 repeater
+link 595 594 repeater
+link 596 511 inverter
+link 594 511 inverter
+link 598 599 inverter
+link 598 600 inverter
+link 597 599 inverter
+link 597 600 inverter
+link 598 654 inverter
+link 597 601 inverter
+link 599 653 inverter
+link 654 655 inverter
+link 601 655 inverter
+link 653 654 repeater
+link 653 601 repeater
+link 657 658 inverter
+link 657 659 inverter
+link 656 658 inverter
+link 656 659 inverter
+link 657 662 inverter
+link 656 660 inverter
+link 658 661 inverter
+link 661 662 repeater
+link 661 660 repeater
+link 662 597 inverter
+link 660 597 inverter
+link 664 665 inverter
+link 664 666 inverter
+link 663 665 inverter
+link 663 666 inverter
+link 664 669 inverter
+link 663 667 inverter
+link 665 668 inverter
+link 669 670 inverter
+link 667 670 inverter
+link 668 669 repeater
+link 668 667 repeater
+link 672 673 inverter
+link 672 674 inverter
+link 672 677 inverter
+link 673 676 inverter
+link 676 677 repeater
+link 676 675 repeater
+link 677 663 inverter
+link 675 663 inverter
+link 517 598 inverter
+link 593 598 inverter
+link 600 664 inverter
+link 659 664 inverter
+link 681 683 inverter
+link 683 682 repeater
+link 683 684 repeater
+link 682 685 inverter
+link 684 685 inverter
+link 680 681 inverter
+link 680 684 inverter
+link 679 681 inverter
+link 679 682 inverter
+link 688 690 inverter
+link 690 689 repeater
+link 690 691 repeater
+link 689 692 inverter
+link 691 692 inverter
+link 687 688 inverter
+link 687 691 inverter
+link 686 688 inverter
+link 686 689 inverter
+link 695 697 inverter
+link 697 696 repeater
+link 697 698 repeater
+link 696 699 inverter
+link 698 699 inverter
+link 694 695 inverter
+link 694 698 inverter
+link 693 695 inverter
+link 693 696 inverter
+link 718 719 inverter
+link 699 703 inverter
+link 692 702 inverter
+link 685 701 inverter
+link 704 718 inverter
+link 705 718 inverter
+link 706 718 inverter
+link 707 718 inverter
+link 708 718 inverter
+link 720 721 inverter
+link 709 720 inverter
+link 710 720 inverter
+link 711 720 inverter
+link 712 720 inverter
+link 722 723 inverter
+link 713 722 inverter
+link 714 722 inverter
+link 715 722 inverter
+link 724 725 inverter
+link 716 724 inverter
+link 717 724 inverter
+link 679 716 repeater
+link 686 713 repeater
+link 693 709 repeater
+link 700 705 inverter
+link 694 710 inverter
+link 687 714 inverter
+link 680 717 inverter
+link 701 715 repeater
+link 701 711 repeater
+link 701 706 repeater
+link 702 707 repeater
+link 702 712 repeater
+link 703 708 repeater
+link 726 704 repeater
+link 719 727 repeater
+link 721 727 repeater
+link 723 727 repeater
+link 725 727 repeater
+link 727 590 repeater
+link 727 656 repeater
+link 506 726 repeater
+link 506 591 repeater
+link 549 693 repeater
+link 549 657 repeater
+link 564 686 repeater
+link 564 672 repeater
+link 579 679 repeater
+link 671 673 inverter
+link 671 675 inverter
+link 671 674 inverter
+link 731 732 inverter
+link 731 733 inverter
+link 731 736 inverter
+link 732 735 inverter
+link 735 736 repeater
+link 735 734 repeater
+link 737 732 inverter
+link 737 734 inverter
+link 737 733 inverter
+link 730 738 inverter
+link 730 739 inverter
+link 730 742 inverter
+link 738 741 inverter
+link 741 742 repeater
+link 741 740 repeater
+link 742 678 inverter
+link 740 678 inverter
+link 743 738 inverter
+link 743 740 inverter
+link 743 739 inverter
+link 736 743 inverter
+link 734 743 inverter
+link 666 730 inverter
+link 674 730 inverter
+link 579 731 repeater
+link 206 207 inverter
+link 206 208 inverter
+link 205 207 inverter
+link 205 208 inverter
+link 206 212 inverter
+link 205 210 inverter
+link 207 211 inverter
+link 212 213 inverter
+link 210 213 inverter
+link 211 212 repeater
+link 211 210 repeater
+link 508 509 inverter
+link 508 510 inverter
+link 498 509 inverter
+link 498 510 inverter
+link 508 603 inverter
+link 498 527 inverter
+link 509 528 inverter
+link 528 603 repeater
+link 528 527 repeater
+link 603 205 inverter
+link 527 205 inverter
+link 605 606 inverter
+link 605 607 inverter
+link 604 606 inverter
+link 604 607 inverter
+link 605 610 inverter
+link 604 608 inverter
+link 606 609 inverter
+link 610 611 inverter
+link 608 611 inverter
+link 609 610 repeater
+link 609 608 repeater
+link 613 614 inverter
+link 613 615 inverter
+link 612 614 inverter
+link 612 615 inverter
+link 613 618 inverter
+link 612 616 inverter
+link 614 617 inverter
+link 617 618 repeater
+link 617 616 repeater
+link 618 604 inverter
+link 616 604 inverter
+link 620 621 inverter
+link 620 622 inverter
+link 619 621 inverter
+link 619 622 inverter
+link 620 625 inverter
+link 619 623 inverter
+link 621 624 inverter
+link 625 626 inverter
+link 623 626 inverter
+link 624 625 repeater
+link 624 623 repeater
+link 627 628 inverter
+link 627 629 inverter
+link 627 632 inverter
+link 628 631 inverter
+link 631 632 repeater
+link 631 630 repeater
+link 632 619 inverter
+link 630 619 inverter
+link 208 605 inverter
+link 510 605 inverter
+link 607 620 inverter
+link 615 620 inverter
+link 635 637 inverter
+link 637 636 repeater
+link 637 638 repeater
+link 636 639 inverter
+link 638 639 inverter
+link 634 635 inverter
+link 634 638 inverter
+link 633 635 inverter
+link 633 636 inverter
+link 642 644 inverter
+link 644 643 repeater
+link 644 744 repeater
+link 643 745 inverter
+link 744 745 inverter
+link 641 642 inverter
+link 641 744 inverter
+link 640 642 inverter
+link 640 643 inverter
+link 748 750 inverter
+link 750 749 repeater
+link 750 751 repeater
+link 749 752 inverter
+link 751 752 inverter
+link 747 748 inverter
+link 747 751 inverter
+link 746 748 inverter
+link 746 749 inverter
+link 768 769 inverter
+link 752 756 inverter
+link 745 755 inverter
+link 639 754 inverter
+link 757 768 inverter
+link 758 768 inverter
+link 759 768 inverter
+link 760 768 inverter
+link 761 768 inverter
+link 770 771 inverter
+link 762 770 inverter
+link 763 770 inverter
+link 764 770 inverter
+link 765 770 inverter
+link 772 773 inverter
+link 766 772 inverter
+link 767 772 inverter
+link 640 766 repeater
+link 746 762 repeater
+link 753 758 inverter
+link 747 763 inverter
+link 641 767 inverter
+link 754 764 repeater
+link 754 759 repeater
+link 755 760 repeater
+link 755 765 repeater
+link 756 761 repeater
+link 774 757 repeater
+link 769 775 repeater
+link 771 775 repeater
+link 773 775 repeater
+link 775 498 repeater
+link 775 612 repeater
+link 777 628 inverter
+link 777 630 inverter
+link 777 629 inverter
+link 778 779 inverter
+link 778 780 inverter
+link 778 783 inverter
+link 779 782 inverter
+link 782 783 repeater
+link 782 781 repeater
+link 784 779 inverter
+link 784 781 inverter
+link 784 780 inverter
+link 786 787 inverter
+link 786 788 inverter
+link 786 791 inverter
+link 787 790 inverter
+link 790 791 repeater
+link 790 789 repeater
+link 791 785 inverter
+link 789 785 inverter
+link 792 787 inverter
+link 792 789 inverter
+link 792 788 inverter
+link 783 792 inverter
+link 781 792 inverter
+link 622 786 inverter
+link 629 786 inverter
+link 589 746 repeater
+link 655 640 repeater
+link 670 633 repeater
+link 678 776 repeater
+link 589 613 repeater
+link 655 627 repeater
+link 670 778 repeater
+link 507 796 repeater
+link 795 794 repeater
+link 799 772 inverter
+link 754 799 repeater
+link 803 775 repeater
+link 802 803 inverter
+link 801 802 inverter
+link 800 802 inverter
+link 633 801 repeater
+link 634 800 inverter
+link 204 797 repeater
+link 797 804 repeater
+link 804 805 repeater
+link 805 795 repeater
+link 331 330 repeater
+link 331 332 inverter
+link 332 331 inverter
+link 333 331 inverter
+link 334 332 inverter
+link 335 333 inverter
+link 336 334 inverter
+link 336 333 inverter
+link 335 334 repeater
+link 338 337 repeater
+link 338 339 inverter
 link 339 338 inverter
-link 265 338 inverter
-link 266 354 inverter
-link 354 355 inverter
-link 267 354 inverter
-link 268 354 inverter
-link 269 356 inverter
-link 286 356 inverter
-link 287 356 inverter
-link 288 356 inverter
-link 356 357 inverter
-link 289 358 inverter
+link 352 338 inverter
+link 354 339 inverter
+link 355 352 inverter
+link 356 354 inverter
+link 356 352 inverter
+link 355 354 repeater
+link 358 357 repeater
 link 358 359 inverter
-link 290 358 inverter
-link 291 358 inverter
-link 292 358 inverter
-link 352 358 inverter
-link 355 336 repeater
-link 357 336 repeater
-link 359 336 repeater
-link 305 265 repeater
-link 304 339 inverter
-link 297 267 repeater
-link 296 266 inverter
-link 270 269 inverter
-link 271 286 repeater
-link 274 289 inverter
-link 275 290 repeater
-link 311 268 repeater
-link 311 287 repeater
-link 311 291 repeater
-link 303 288 repeater
-link 303 292 repeater
-link 295 352 repeater
+link 359 358 inverter
+link 813 358 inverter
+link 814 359 inverter
+link 815 813 inverter
+link 816 814 inverter
+link 816 813 inverter
+link 815 814 repeater
+link 818 817 repeater
+link 818 819 inverter
+link 819 818 inverter
+link 820 818 inverter
+link 821 819 inverter
+link 822 820 inverter
+link 823 821 inverter
+link 823 820 inverter
+link 822 821 repeater
+link 330 322 repeater
+link 330 324 repeater
+link 330 326 repeater
+link 330 328 repeater
+link 330 321 inverter
+link 330 323 inverter
+link 330 325 inverter
+link 330 327 inverter
+link 330 329 inverter
+link 337 321 repeater
+link 337 324 repeater
+link 337 325 repeater
+link 337 328 repeater
+link 337 329 repeater
+link 337 322 inverter
+link 337 323 inverter
+link 337 326 inverter
+link 337 327 inverter
+link 357 321 repeater
+link 357 322 repeater
+link 357 323 repeater
+link 357 328 repeater
+link 357 329 repeater
+link 357 324 inverter
+link 357 325 inverter
+link 357 326 inverter
+link 357 327 inverter
+link 817 321 repeater
+link 817 322 repeater
+link 817 323 repeater
+link 817 324 repeater
+link 817 325 repeater
+link 817 326 repeater
+link 817 327 repeater
+link 817 328 inverter
+link 817 329 inverter
+link 321 825 inverter
+link 322 826 inverter
+link 323 827 inverter
+link 324 828 inverter
+link 325 829 inverter
+link 326 830 inverter
+link 327 831 inverter
+link 328 832 inverter
+link 329 833 inverter
+link 824 313 repeater
+link 824 314 repeater
+link 824 319 repeater
+link 824 316 repeater
+link 824 317 repeater
+link 824 318 repeater
+link 825 319 repeater
+link 825 317 repeater
+link 826 313 repeater
+link 826 314 repeater
+link 826 315 repeater
+link 826 317 repeater
+link 826 318 repeater
+link 827 313 repeater
+link 827 319 repeater
+link 827 315 repeater
+link 827 317 repeater
+link 827 318 repeater
+link 828 319 repeater
+link 828 315 repeater
+link 828 316 repeater
+link 828 317 repeater
+link 829 313 repeater
+link 829 319 repeater
+link 829 315 repeater
+link 829 316 repeater
+link 829 318 repeater
+link 830 313 repeater
+link 830 314 repeater
+link 830 319 repeater
+link 830 315 repeater
+link 830 316 repeater
+link 830 318 repeater
+link 831 318 repeater
+link 831 317 repeater
+link 831 319 repeater
+link 832 318 repeater
+link 832 317 repeater
+link 832 316 repeater
+link 832 315 repeater
+link 832 319 repeater
+link 832 314 repeater
+link 832 313 repeater
+link 833 318 repeater
+link 833 317 repeater
+link 833 316 repeater
+link 833 315 repeater
+link 833 319 repeater
+link 833 313 repeater
+link 852 851 repeater
+link 852 853 inverter
+link 853 852 inverter
+link 854 852 inverter
+link 855 853 inverter
+link 856 854 inverter
+link 857 855 inverter
+link 857 854 inverter
+link 856 855 repeater
+link 859 858 repeater
+link 859 860 inverter
+link 860 859 inverter
+link 861 859 inverter
+link 862 860 inverter
+link 863 861 inverter
+link 864 862 inverter
+link 864 861 inverter
+link 863 862 repeater
+link 866 865 repeater
+link 866 867 inverter
+link 867 866 inverter
+link 868 866 inverter
+link 869 867 inverter
+link 870 868 inverter
+link 871 869 inverter
+link 871 868 inverter
+link 870 869 repeater
+link 873 872 repeater
+link 873 874 inverter
+link 874 873 inverter
+link 875 873 inverter
+link 876 874 inverter
+link 877 875 inverter
+link 878 876 inverter
+link 878 875 inverter
+link 877 876 repeater
+link 851 841 repeater
+link 851 843 repeater
+link 851 845 repeater
+link 851 847 repeater
+link 851 849 repeater
+link 851 842 inverter
+link 851 844 inverter
+link 851 846 inverter
+link 851 848 inverter
+link 851 850 inverter
+link 858 841 repeater
+link 858 842 repeater
+link 858 845 repeater
+link 858 846 repeater
+link 858 849 repeater
+link 858 850 repeater
+link 858 843 inverter
+link 858 844 inverter
+link 858 847 inverter
+link 858 848 inverter
+link 865 841 repeater
+link 865 842 repeater
+link 865 843 repeater
+link 865 844 repeater
+link 865 849 repeater
+link 865 850 repeater
+link 865 845 inverter
+link 865 846 inverter
+link 865 847 inverter
+link 865 848 inverter
+link 872 841 repeater
+link 872 842 repeater
+link 872 843 repeater
+link 872 844 repeater
+link 872 845 repeater
+link 872 846 repeater
+link 872 847 repeater
+link 872 848 repeater
+link 872 849 inverter
+link 872 850 inverter
+link 841 879 inverter
+link 842 880 inverter
+link 843 881 inverter
+link 844 882 inverter
+link 845 883 inverter
+link 846 884 inverter
+link 847 885 inverter
+link 848 886 inverter
+link 849 887 inverter
+link 850 888 inverter
+link 879 834 repeater
+link 879 835 repeater
+link 879 840 repeater
+link 879 837 repeater
+link 879 838 repeater
+link 879 839 repeater
+link 880 840 repeater
+link 880 838 repeater
+link 881 834 repeater
+link 881 835 repeater
+link 881 836 repeater
+link 881 838 repeater
+link 881 839 repeater
+link 882 834 repeater
+link 882 840 repeater
+link 882 836 repeater
+link 882 838 repeater
+link 882 839 repeater
+link 883 840 repeater
+link 883 836 repeater
+link 883 837 repeater
+link 883 838 repeater
+link 884 834 repeater
+link 884 840 repeater
+link 884 836 repeater
+link 884 837 repeater
+link 884 839 repeater
+link 885 834 repeater
+link 885 835 repeater
+link 885 840 repeater
+link 885 836 repeater
+link 885 837 repeater
+link 885 839 repeater
+link 886 839 repeater
+link 886 838 repeater
+link 886 840 repeater
+link 887 839 repeater
+link 887 838 repeater
+link 887 837 repeater
+link 887 836 repeater
+link 887 840 repeater
+link 887 835 repeater
+link 887 834 repeater
+link 888 839 repeater
+link 888 838 repeater
+link 888 837 repeater
+link 888 836 repeater
+link 888 840 repeater
+link 888 834 repeater
+link 794 856 repeater
+link 213 863 repeater
+link 611 870 repeater
+link 626 877 repeater
+link 785 335 repeater
+link 776 355 repeater
+link 793 815 repeater
+link 798 822 repeater
+link 889 823 repeater
+link 889 816 repeater
+link 889 356 repeater
+link 889 336 repeater
+link 889 857 repeater
+link 889 864 repeater
+link 889 871 repeater
+link 889 878 repeater
+link 907 889 inverter
+link 908 910 repeater
+link 910 915 repeater
+link 915 916 repeater
+link 916 911 repeater
+link 918 919 repeater
+link 917 919 repeater
+link 909 913 repeater
+link 913 914 repeater
+link 914 912 repeater
+link 908 909 inverter
+link 909 912 inverter
+link 912 917 inverter
+link 910 911 inverter
+link 911 918 inverter
+link 920 922 repeater
+link 922 927 repeater
+link 927 928 repeater
+link 928 923 repeater
+link 930 931 repeater
+link 929 931 repeater
+link 921 925 repeater
+link 925 926 repeater
+link 926 924 repeater
+link 920 921 inverter
+link 921 924 inverter
+link 924 929 inverter
+link 922 923 inverter
+link 923 930 inverter
+link 932 934 repeater
+link 934 939 repeater
+link 939 940 repeater
+link 940 935 repeater
+link 942 943 repeater
+link 941 943 repeater
+link 933 937 repeater
+link 937 938 repeater
+link 938 936 repeater
+link 932 933 inverter
+link 933 936 inverter
+link 936 941 inverter
+link 934 935 inverter
+link 935 942 inverter
+link 944 946 repeater
+link 946 951 repeater
+link 951 952 repeater
+link 952 947 repeater
+link 954 955 repeater
+link 953 955 repeater
+link 945 949 repeater
+link 949 950 repeater
+link 950 948 repeater
+link 944 945 inverter
+link 945 948 inverter
+link 948 953 inverter
+link 946 947 inverter
+link 947 954 inverter
+link 956 958 repeater
+link 958 963 repeater
+link 963 964 repeater
+link 964 959 repeater
+link 966 967 repeater
+link 965 967 repeater
+link 957 961 repeater
+link 961 962 repeater
+link 962 960 repeater
+link 956 957 inverter
+link 957 960 inverter
+link 960 965 inverter
+link 958 959 inverter
+link 959 966 inverter
+link 968 970 repeater
+link 970 975 repeater
+link 975 976 repeater
+link 976 971 repeater
+link 978 979 repeater
+link 977 979 repeater
+link 969 973 repeater
+link 973 974 repeater
+link 974 972 repeater
+link 968 969 inverter
+link 969 972 inverter
+link 972 977 inverter
+link 970 971 inverter
+link 971 978 inverter
+link 503 908 repeater
+link 502 920 repeater
+link 501 932 repeater
+link 500 944 repeater
+link 507 956 repeater
+link 204 968 repeater
+link 890 891 repeater
+link 891 907 repeater
+link 890 893 repeater
+link 893 892 repeater
+link 892 891 repeater
+link 893 894 repeater
+link 894 895 repeater
+link 895 892 repeater
+link 894 897 repeater
+link 897 896 repeater
+link 896 895 repeater
+link 897 898 repeater
+link 898 899 repeater
+link 899 896 repeater
+link 898 901 repeater
+link 901 900 repeater
+link 900 899 repeater
+link 901 902 repeater
+link 902 903 repeater
+link 903 900 repeater
+link 902 905 repeater
+link 905 904 repeater
+link 904 903 repeater
+link 905 906 repeater
+link 906 980 repeater
+link 980 904 repeater
+link 906 982 repeater
+link 982 981 repeater
+link 981 980 repeater
+link 982 983 repeater
+link 983 984 repeater
+link 984 981 repeater
+link 983 986 repeater
+link 986 985 repeater
+link 985 984 repeater
+link 979 890 repeater
+link 967 890 repeater
+link 955 890 repeater
+link 943 890 repeater
+link 931 890 repeater
+link 919 890 repeater
+link 729 793 repeater
+link 602 987 repeater
+link 987 988 repeater
+link 988 989 repeater
+link 989 729 repeater
+link 985 1001 repeater
+link 1001 1000 repeater
+link 1000 999 repeater
+link 999 998 repeater
+link 998 997 repeater
+link 997 996 repeater
+link 996 995 repeater
+link 995 994 repeater
+link 994 993 repeater
+link 993 992 repeater
+link 992 991 repeater
+link 991 990 repeater
+link 990 984 repeater
+link 1001 990 repeater
+link 1000 991 repeater
+link 999 992 repeater
+link 998 993 repeater
+link 997 994 repeater
+link 996 1003 repeater
+link 1003 1002 repeater
+link 1002 995 repeater
+link 1003 1005 repeater
+link 1005 1004 repeater
+link 1004 1002 repeater
+link 1024 1023 repeater
+link 1024 1025 inverter
+link 1025 1024 inverter
+link 1026 1024 inverter
+link 1027 1025 inverter
+link 1028 1026 inverter
+link 1029 1027 inverter
+link 1029 1026 inverter
+link 1028 1027 repeater
+link 1031 1030 repeater
+link 1031 1032 inverter
+link 1032 1031 inverter
+link 1033 1031 inverter
+link 1034 1032 inverter
+link 1035 1033 inverter
+link 1036 1034 inverter
+link 1036 1033 inverter
+link 1035 1034 repeater
+link 1038 1037 repeater
+link 1038 1039 inverter
+link 1039 1038 inverter
+link 1040 1038 inverter
+link 1041 1039 inverter
+link 1042 1040 inverter
+link 1043 1041 inverter
+link 1043 1040 inverter
+link 1042 1041 repeater
+link 1045 1044 repeater
+link 1045 1046 inverter
+link 1046 1045 inverter
+link 1047 1045 inverter
+link 1048 1046 inverter
+link 1049 1047 inverter
+link 1050 1048 inverter
+link 1050 1047 inverter
+link 1049 1048 repeater
+link 1023 1013 repeater
+link 1023 1015 repeater
+link 1023 1017 repeater
+link 1023 1019 repeater
+link 1023 1021 repeater
+link 1023 1014 inverter
+link 1023 1016 inverter
+link 1023 1018 inverter
+link 1023 1020 inverter
+link 1023 1022 inverter
+link 1030 1013 repeater
+link 1030 1014 repeater
+link 1030 1017 repeater
+link 1030 1018 repeater
+link 1030 1021 repeater
+link 1030 1022 repeater
+link 1030 1015 inverter
+link 1030 1016 inverter
+link 1030 1019 inverter
+link 1030 1020 inverter
+link 1037 1013 repeater
+link 1037 1014 repeater
+link 1037 1015 repeater
+link 1037 1016 repeater
+link 1037 1021 repeater
+link 1037 1022 repeater
+link 1037 1017 inverter
+link 1037 1018 inverter
+link 1037 1019 inverter
+link 1037 1020 inverter
+link 1044 1013 repeater
+link 1044 1014 repeater
+link 1044 1015 repeater
+link 1044 1016 repeater
+link 1044 1017 repeater
+link 1044 1018 repeater
+link 1044 1019 repeater
+link 1044 1020 repeater
+link 1044 1021 inverter
+link 1044 1022 inverter
+link 1013 1051 inverter
+link 1014 1052 inverter
+link 1015 1053 inverter
+link 1016 1054 inverter
+link 1017 1055 inverter
+link 1018 1056 inverter
+link 1019 1057 inverter
+link 1020 1058 inverter
+link 1021 1059 inverter
+link 1022 1060 inverter
+link 1051 1006 repeater
+link 1051 1007 repeater
+link 1051 1012 repeater
+link 1051 1009 repeater
+link 1051 1010 repeater
+link 1051 1011 repeater
+link 1052 1012 repeater
+link 1052 1010 repeater
+link 1053 1006 repeater
+link 1053 1007 repeater
+link 1053 1008 repeater
+link 1053 1010 repeater
+link 1053 1011 repeater
+link 1054 1006 repeater
+link 1054 1012 repeater
+link 1054 1008 repeater
+link 1054 1010 repeater
+link 1054 1011 repeater
+link 1055 1012 repeater
+link 1055 1008 repeater
+link 1055 1009 repeater
+link 1055 1010 repeater
+link 1056 1006 repeater
+link 1056 1012 repeater
+link 1056 1008 repeater
+link 1056 1009 repeater
+link 1056 1011 repeater
+link 1057 1006 repeater
+link 1057 1007 repeater
+link 1057 1012 repeater
+link 1057 1008 repeater
+link 1057 1009 repeater
+link 1057 1011 repeater
+link 1058 1011 repeater
+link 1058 1010 repeater
+link 1058 1012 repeater
+link 1059 1011 repeater
+link 1059 1010 repeater
+link 1059 1009 repeater
+link 1059 1008 repeater
+link 1059 1012 repeater
+link 1059 1007 repeater
+link 1059 1006 repeater
+link 1060 1011 repeater
+link 1060 1010 repeater
+link 1060 1009 repeater
+link 1060 1008 repeater
+link 1060 1012 repeater
+link 1060 1006 repeater
+link 796 214 repeater
+link 214 215 repeater
+link 215 216 repeater
+link 216 774 repeater
+link 774 508 repeater
 lever 100 200 0 10 0
 lever 100 400 26 10 1
 lever 450 450 30 7 0
@@ -894,40 +2578,122 @@ lever 1620 180 117 7 0
 lever 1700 180 143 7 0
 lever 1780 180 158 7 0
 lever 1440 120 128 7 1
-lever 1160 -740 210 7 0
-lever 1160 -700 211 7 1
-lever 1160 -660 212 7 1
-lever 1160 -620 213 7 0
-lever 1820 -340 221 7 1
-lever 1820 -300 222 7 0
-lever 1820 -260 214 7 0
-lever 1820 -220 215 7 0
-lever 1820 -420 228 7 1
-lever 1820 -380 229 7 1
-lever 1820 -500 235 7 1
-lever 1820 -460 236 7 1
-lever 1800 -1140 304 7 0
-lever 1800 -1060 296 7 1
-lever 1800 -980 270 7 1
-lever 1800 -900 274 7 1
-lever 1780 -1100 305 7 0
-lever 1780 -1020 297 7 1
-lever 1780 -940 271 7 0
-lever 1780 -860 275 7 1
 lever 1480 -1040 340 7 0
 lever 1480 -999 341 7 0
 lever 1480 -920 258 7 0
 lever 1480 -880 263 7 0
+lever 420 -1540 383 7 0
+lever 420 -1460 375 7 0
+lever 420 -1380 367 7 0
+lever 420 -1300 209 7 0
+lever 560 -1500 384 7 0
+lever 560 -1420 376 7 1
+lever 560 -1340 368 7 0
+lever 560 -1260 353 7 1
+lever 1180 -1280 433 7 0
+lever 1180 -1360 470 7 0
+lever 1160 -1320 469 7 0
+lever 1160 -1240 432 7 0
+lever 1180 -1200 440 7 0
+lever 1160 -1160 439 7 0
+lever 1180 -1120 455 7 0
+lever 1160 -1080 454 7 0
+lever 2720 -720 500 7 0
+lever 2720 -640 501 7 1
+lever 2720 -560 502 7 0
+lever 2720 -480 503 7 0
+lever 2820 -600 504 7 0
+lever 2820 -520 492 7 0
+lever 2820 -440 485 7 1
+lever 2820 -360 478 7 0
+lever 3340 -720 700 7 0
+lever 3340 -640 694 7 0
+lever 3340 -560 687 7 1
+lever 3340 -480 680 7 0
+lever 2720 -880 204 7 0
+lever 3860 -840 753 7 0
+lever 3860 -760 747 7 0
+lever 3860 -680 641 7 1
+lever 3860 -600 634 7 0
+lever 2720 -800 507 7 1
+lever 1080 -440 1029 7 1
+lever 1080 -360 1036 7 1
+lever 1080 -280 1043 7 1
+lever 1080 -200 1050 7 1
+lever 1040 -460 1028 7 0
+lever 1040 -380 1035 7 0
+lever 1040 -300 1042 7 0
+lever 1040 -220 1049 7 0
 led 1500 320 532 20
 led 1540 320 171 20
 led 1580 320 178 20
 led 1620 320 185 20
-led 1500 -740 204 20
-led 1500 -700 205 20
-led 1500 -660 206 20
-led 1500 -620 207 20
-led 1500 -560 208 20
-led 1500 -520 209 20
-led 2160 -1040 335 20
-led 2160 -1000 278 20
-led 2160 -960 336 20
+led 860 -1540 411 20
+led 1460 -1400 468 20
+led 1460 -1320 431 20
+led 1460 -1240 423 20
+led 1460 -1160 453 20
+led 1460 -1080 476 20
+led 4560 -1100 313 20
+led 4520 -1100 313 20
+led 4600 -1100 313 20
+led 4480 -1140 314 20
+led 4480 -1180 314 20
+led 4480 -1220 314 20
+led 4520 -1260 315 20
+led 4560 -1260 315 20
+led 4600 -1260 315 20
+led 4480 -1300 316 20
+led 4480 -1340 316 20
+led 4480 -1380 316 20
+led 4640 -1300 317 20
+led 4640 -1340 317 20
+led 4640 -1380 317 20
+led 4520 -1420 318 20
+led 4560 -1420 318 20
+led 4600 -1420 318 20
+led 4640 -1140 319 20
+led 4640 -1180 319 20
+led 4640 -1220 319 20
+led 4800 -1100 834 20
+led 4760 -1100 834 20
+led 4840 -1100 834 20
+led 4720 -1140 835 20
+led 4720 -1180 835 20
+led 4720 -1220 835 20
+led 4760 -1260 836 20
+led 4800 -1260 836 20
+led 4840 -1260 836 20
+led 4720 -1300 837 20
+led 4720 -1340 837 20
+led 4720 -1380 837 20
+led 4880 -1300 838 20
+led 4880 -1340 838 20
+led 4880 -1380 838 20
+led 4760 -1420 839 20
+led 4800 -1420 839 20
+led 4840 -1420 839 20
+led 4880 -1140 840 20
+led 4880 -1180 840 20
+led 4880 -1220 840 20
+led 1260 -560 1006 20
+led 1220 -560 1006 20
+led 1300 -560 1006 20
+led 1180 -600 1007 20
+led 1180 -640 1007 20
+led 1180 -680 1007 20
+led 1220 -720 1008 20
+led 1260 -720 1008 20
+led 1300 -720 1008 20
+led 1180 -760 1009 20
+led 1180 -800 1009 20
+led 1180 -840 1009 20
+led 1340 -760 1010 20
+led 1340 -800 1010 20
+led 1340 -840 1010 20
+led 1220 -880 1011 20
+led 1260 -880 1011 20
+led 1300 -880 1011 20
+led 1340 -600 1012 20
+led 1340 -640 1012 20
+led 1340 -680 1012 20
