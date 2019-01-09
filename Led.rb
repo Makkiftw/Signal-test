@@ -41,10 +41,10 @@ class Led
 		
 		if @value == 0
 			color_new = $led_off_color
-			col = 0xff777777
+			col = 0x66777777
 		else
 			color_new = $led_on_color
-			col = $led_on_color
+			col = 0x66ffff00
 		end
 		
 		if $select_start != false

@@ -111,7 +111,7 @@ class GameWindow < Gosu::Window
 			$camera_x += 5 / $camera_zoom
 		end
 		if button_down? Gosu::KbQ
-			$camera_zoom = [$camera_zoom * 0.98, 0.4].max
+			$camera_zoom = [$camera_zoom * 0.98, 0.3].max
 		end
 		if button_down? Gosu::KbE
 			$camera_zoom = [$camera_zoom / 0.98, 3.0].min
@@ -428,9 +428,34 @@ class GameWindow < Gosu::Window
 		
 	end
 	
+	def save_to(filename)
+		
+		self.create_textflash($window_width/2-20, 50, "Saved!", false, 0xffffffff, false, "big", 100)
+		
+		save_text = ""
+		for i in 0..$nodes.length-1
+			save_text << "node #{$nodes[i].x} #{$nodes[i].y} #{$nodes[i].value} #{$nodes[i].id}\n"
+		end
+		for i in 0..$links.length-1
+			save_text << "link #{$links[i].input_id} #{$links[i].output_id} #{$links[i].type}\n"
+		end
+		for i in 0..$levers.length-1
+			save_text << "lever #{$levers[i].x.round} #{$levers[i].y.round} #{$levers[i].id} #{$levers[i].size} #{$levers[i].value}\n"
+		end
+		for i in 0..$leds.length-1
+			save_text << "led #{$leds[i].x.round} #{$leds[i].y.round} #{$leds[i].id} #{$leds[i].size}\n"
+		end
+		
+		File.open(filename, "w") {|f| f.write(save_text) }
+		
+	end
+	
 	def button_down(id)
 		case id
 			when Gosu::KbEscape
+				
+				self.save_to('autosave.txt')
+				
 				close
 			when Gosu::KbReturn
 				self.exit_textbox
@@ -440,23 +465,10 @@ class GameWindow < Gosu::Window
 				self.exit_textbox
 				
 				if point_in_rectangle(mouse_x, mouse_y, 7, 7, 69, 39)
-					self.create_textflash($window_width/2-20, 50, "Saved!", false, 0xffffffff, false, "big", 100)
 					
-					save_text = ""
-					for i in 0..$nodes.length-1
-						save_text << "node #{$nodes[i].x} #{$nodes[i].y} #{$nodes[i].value} #{$nodes[i].id}\n"
-					end
-					for i in 0..$links.length-1
-						save_text << "link #{$links[i].input_id} #{$links[i].output_id} #{$links[i].type}\n"
-					end
-					for i in 0..$levers.length-1
-						save_text << "lever #{$levers[i].x} #{$levers[i].y} #{$levers[i].id} #{$levers[i].size} #{$levers[i].value}\n"
-					end
-					for i in 0..$leds.length-1
-						save_text << "led #{$leds[i].x} #{$leds[i].y} #{$leds[i].id} #{$leds[i].size}\n"
-					end
-					# puts save_text
-					File.open('savefile.txt', "w") {|f| f.write(save_text) }
+					self.save_to('savefile.txt')
+					
+					
 					@cursor = false
 					@cursor_input = false
 				elsif point_in_rectangle(mouse_x, mouse_y, $window_width - 45, $window_height - 35, $window_width - 7, $window_height - 7)
