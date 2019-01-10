@@ -44,7 +44,7 @@ class Led
 			col = 0x66777777
 		else
 			color_new = $led_on_color
-			col = 0x66ffff00
+			col = 0x33ffff00
 		end
 		
 		if $select_start != false
@@ -64,11 +64,11 @@ class Led
 			end
 		end
 		
-		@window.draw_quad((@x-@size)*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, (@y-@size)*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, col, (@x+@size)*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, (@y-@size)*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, col, (@x+@size)*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, (@y+@size)*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, col, (@x-@size)*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, (@y+@size)*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, col, 2)
+		@window.draw_quad((@x-@size)*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, (@y-@size)*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, color_new, (@x+@size)*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, (@y-@size)*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, color_new, (@x+@size)*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, (@y+@size)*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, color_new, (@x-@size)*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, (@y+@size)*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, color_new, 2)
 		@window.draw_quad((@x-(@size-2))*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, (@y-(@size-2))*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, color_new, (@x+(@size-2))*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, (@y-(@size-2))*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, color_new, (@x+(@size-2))*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, (@y+(@size-2))*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, color_new, (@x-(@size-2))*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, (@y+(@size-2))*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, color_new, 2)
 		
 		
-		@window.draw_line(@x*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, @y*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, color_new, @input.x*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, @input.y*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, color_new, 1)
+		@window.draw_line(@x*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, @y*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, col, @input.x*$camera_zoom + $window_width/2 - $camera_x*$camera_zoom, @input.y*$camera_zoom + $window_height/2 - $camera_y*$camera_zoom, col, 1)
 		
 	end
 	

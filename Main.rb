@@ -39,7 +39,7 @@ class GameWindow < Gosu::Window
 		## The colors used in the circuits
 		$off_color = 0xffffffff     ## White
 		$on_color = 0xffff00ff      ## Purple
-		$led_off_color = 0xff888888 ## Gray
+		$led_off_color = 0xff556677 ## Gray
 		$led_on_color = 0xffffff00  ## Yellow
 		
 		## Sprites
@@ -92,6 +92,7 @@ class GameWindow < Gosu::Window
 		@cursor_input = false
 		$select_start = false
 		@copy_data = false
+		$optimized_drawing = true
 		
 	end
 	
@@ -715,6 +716,16 @@ class GameWindow < Gosu::Window
 							if point_in_rectangle(mouse_x, mouse_y, x1, y1, x2, y2)
 								self.text_input = @text_field2
 							end
+							
+							### Optimized Drawing
+							a = $window_width - 300+20
+							b = $window_height - 200+150
+							c = $window_width - 300+165
+							d = $window_height - 200+178
+							if point_in_rectangle(mouse_x, mouse_y, a, b, c, d)
+								$optimized_drawing = !$optimized_drawing
+							end
+							
 						else
 							@cursor = false
 						end
@@ -1468,6 +1479,27 @@ class GameWindow < Gosu::Window
 				self.draw_quad(x1, y1, col0, x2, y1, col0, x2, y2, col0, x1, y2, col0, 5)
 				self.draw_quad(x1+3, y1+3, col3, x2-3, y1+3, col3, x2-3, y2-3, col3, x1+3, y2-3, col3, 5)
 			end
+			
+			### Optimized Drawing
+			a = $window_width - 300+20
+			b = $window_height - 200+150
+			c = $window_width - 300+165
+			d = $window_height - 200+178
+			
+			color2 = 0xffffffff
+			if $optimized_drawing == true
+				color2 = 0xffffff00
+			end
+			
+			if point_in_rectangle(mouse_x, mouse_y, a, b, c, d)
+				color1 = 0xff000000
+			else
+				color1 = 0x88888888
+			end
+			
+			self.draw_quad(a, b, color1, c, b, color1, c, d, color1, a, d, color1, 5)
+			self.draw_quad(a+3, b+3, color2, c-3, b+3, color2, c-3, d-3, color2, a+3, d-3, color2, 5)
+			@font.draw("Optimise Drawing", a+9, b+6, 5, 1.0, 1.0, 0xff000000)
 			
 		end
 		
