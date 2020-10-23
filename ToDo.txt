@@ -1,20 +1,22 @@
 
---- Zoom/camera                                          ### DONE!
---- Saving and loading from txt file                     ### DONE!
---- Ingame editor                                        ### DONE!
---- Gridlines                                            ### DONE!
---- AND, NAND, XOR gates for proof of concept            ### DONE!
---- 4 bit binary decoder                                 ### DONE!
---- memory circuit                                       ### DONE!
---- 8 bit memory                                         ### DONE!
---- T-Flip-Flip                                          ### DONE!
---- Copy Pasting                                         ### DONE!
---- Optimisation                                         ### DONE! (roughly)
---- LEDs                                                 ### DONE!
---- Options menu                                         ### DONE!
-
+--- Zoom/camera                                         				### DONE!
+--- Saving and loading from txt file                    				### DONE!
+--- Ingame editor                                       				### DONE!
+--- Gridlines                                            				### DONE!
+--- AND, NAND, XOR gates for proof of concept           				### DONE!
+--- 4 bit binary decoder                                				### DONE!
+--- memory circuit                                     				  	### DONE!
+--- 8 bit memory                                       				  	### DONE!
+--- T-Flip-Flip                                         				### DONE!
+--- Copy Pasting                                       				  	### DONE!
+--- Optimisation                                        				### DONE! (roughly)
+--- LEDs                                                				### DONE!
+--- Options menu                                         				### DONE!
+--- Reduce framedrop when copy/pasting!!!!						### DONE!	22 Oct
+--- Make the game tiled by default (draw gridlines or dots when prompted)		### DONE!	22 Oct
 
 --- Hotkeys
 --- Buttons (similar to levers)
 --- Ingame textfields
 --- User manual
+--- Integrate ashton rendering to further reduce framedrop

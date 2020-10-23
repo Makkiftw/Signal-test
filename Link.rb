@@ -1,17 +1,13 @@
 class Link
 	
-	attr_reader :x, :y, :input_id, :output_id, :type
+	attr_reader :x, :y, :input_id, :output_id, :type, :input, :output
 	
-	def initialize(window, input_id, output_id, type)
-		@window, @input_id, @output_id, @type = window, input_id, output_id, type
-		
-		
-		
-		@input = @window.find_node(input_id)
+	def initialize(window, input, output, type)
+		@window, @input, @output, @type = window, input, output, type
 		
 		@input.set_output(self)
-		
-		@output = @window.find_node(output_id)
+		@input_id = @input.id
+		@output_id = @output.id
 		
 		@reverse_dir = @window.point_direction(@output.x, @output.y, @input.x, @input.y)
 		@mid_x = (@input.x + @output.x)/2
@@ -76,46 +72,61 @@ class Link
 	end
 	
 	def draw
-		
-		cam_corelate_x = $window_width/2 - $camera_x*$camera_zoom
-		cam_corelate_y = $window_height/2 - $camera_y*$camera_zoom
-		
-		if @window.point_in_rectangle(@input.x*$camera_zoom + cam_corelate_x, @input.y*$camera_zoom + cam_corelate_y, 0, 0, $window_width, $window_height) or @window.point_in_rectangle(@output.x*$camera_zoom + cam_corelate_x, @output.y*$camera_zoom + cam_corelate_y, 0, 0, $window_width, $window_height)
-			
-			
-			
-			
-			
-			if @type == "repeater"
-				
-				if @value == 0
-					color_new = $off_color
+		if $draw_links == true
+			if @window.point_in_rectangle(@mid_x*$camera_zoom + $cam_corelate_x, @mid_y*$camera_zoom + $cam_corelate_y, 0, 0, $window_width, $window_height)
+				if @type == "repeater"
+					
+					if @value == 0
+						color_new = $link_off_color
+					else
+						color_new = $link_on_color
+					end
+					
+					x1	= @input.x*$camera_zoom + $cam_corelate_x
+					y1	= @input.y*$camera_zoom + $cam_corelate_y
+					c1	= color_new
+					x2	= @output.x*$camera_zoom + $cam_corelate_x
+					y2	= @output.y*$camera_zoom + $cam_corelate_y
+					c2	= color_new
+					z	= 1
+					@window.draw_line(x1, y1, c1, x2, y2, c2, z)
+					
+					if $optimized_drawing == false
+						
+						x1	= @mid_x*$camera_zoom + $cam_corelate_x
+						y1	= @mid_y*$camera_zoom + $cam_corelate_y
+						c1	= color_new
+						x2	= (@mid_x + @mid_offset_x)*$camera_zoom + $cam_corelate_x
+						y2	= (@mid_y + @mid_offset_y)*$camera_zoom + $cam_corelate_y
+						c2	= color_new
+						z	= 1
+						@window.draw_line(x1, y1, c1, x2, y2, c2, z)
+					end
+					
 				else
-					color_new = $on_color
+					
+					if @value == 0
+						color_new = $link_off_color
+					else
+						color_new = $link_on_color
+					end
+					
+					x1	= @in_x*$camera_zoom + $cam_corelate_x
+					y1	= @in_y*$camera_zoom + $cam_corelate_y
+					c1	= color_new
+					x2	= (@out_x + @out_offset_x)*$camera_zoom + $cam_corelate_x
+					y2	= (@out_y + @out_offset_y)*$camera_zoom + $cam_corelate_y
+					c2	= color_new
+					z	= 1
+					@window.draw_line(x1, y1, c1, x2, y2, c2, z)
+					
+					if $optimized_drawing == false
+						@window.circle_img.draw_rot((@out_x + @out_offset_x)*$camera_zoom + $cam_corelate_x, (@out_y + @out_offset_y)*$camera_zoom + $cam_corelate_y, 2, 0, 0.5, 0.5, 0.4*$camera_zoom, 0.4*$camera_zoom, color_new)
+					end
+					
 				end
-				
-				@window.draw_line(@input.x*$camera_zoom + cam_corelate_x, @input.y*$camera_zoom + cam_corelate_y, color_new, @output.x*$camera_zoom + cam_corelate_x, @output.y*$camera_zoom + cam_corelate_y, color_new, 1)
-				
-				if $optimized_drawing == false
-					@window.draw_line(@mid_x*$camera_zoom + cam_corelate_x, @mid_y*$camera_zoom + cam_corelate_y, color_new, (@mid_x + @mid_offset_x)*$camera_zoom + cam_corelate_x, (@mid_y + @mid_offset_y)*$camera_zoom + cam_corelate_y, color_new, 1)
-				end
-				
-			else
-				
-				if @value == 0
-					color_new = $off_color
-				else
-					color_new = $on_color
-				end
-				
-				@window.draw_line(@in_x*$camera_zoom + cam_corelate_x, @in_y*$camera_zoom + cam_corelate_y, color_new, (@out_x + @out_offset_x)*$camera_zoom + cam_corelate_x, (@out_y + @out_offset_y)*$camera_zoom + cam_corelate_y, color_new, 1)
-				if $optimized_drawing == false
-					@window.circle_img.draw_rot((@out_x + @out_offset_x)*$camera_zoom + cam_corelate_x, (@out_y + @out_offset_y)*$camera_zoom + cam_corelate_y, 2, 0, 0.5, 0.5, 0.4*$camera_zoom, 0.4*$camera_zoom, color_new)
-				end
-				
 			end
 		end
-		
 	end
 	
 end

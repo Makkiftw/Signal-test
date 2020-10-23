@@ -1,0 +1,30 @@
+###############################################################################
+##############################     CHANGELOG     ##############################
+###############################################################################
+
+Title: Signal_test
+Author: Lucas Rebien Jørgensen
+
+
+
+############  v1.2  ############	(23 October 2020)
+
+- Further optimised performance - increasing fps
+----> Incorporated ashton.rb into the game using draw_as_points instead of drawing every node individually
+
+
+############  v1.1  ############	(22 October 2020)
+
+- Reduced framedrop when copy/pasting
+----> Performance cost reduced by 1-2 orders of magnitude
+
+- Minor changes to the options menu
+----> Seperated "Grid" options into "Display grid" and "Placement grid"
+----> Added button "Draw Links" to toggle link visibility, mostly used for performance testing
+
+- Increased window size
+
+
+############  v1.0  ############	(11 Jan 2019)
+
+- Release
