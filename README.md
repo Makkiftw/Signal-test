@@ -17,6 +17,7 @@ The program is launched by opening "Main.rb" with ruby.
 
 # Requirements
 - Ruby v1.9.3 (only tested with 1.9.3, but may work with other versions)
+Ruby Gems:
 - Gosu v0.7.50 (only tested with 0.7.50, but may work with other versions)
 - Ashton v0.1.3 (only testen with 0.1.3, but may work with other versions)
 
