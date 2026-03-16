@@ -27,6 +27,8 @@ Select an item to place by clicking "Node", "Repeater", "Inverter", "Lever", or 
 
 Nodes must be placed on the board first, then other items can be connected to this.
 
+Repeaters and Inverters are directional. The direction can be displayed by toggling "Optimise Drawing" off in the settings.
+
 ## Credits
 Almost all of the ruby code is written by me.
 
