@@ -12,9 +12,9 @@ There is no .exe file attached.
 The program is launched by opening "Main.rb" with ruby.
 
 ## Requirements
-- Ruby v3.2.3 (only tested with 3.2.3, but may work with new versions)
-Ruby Gems:
-- Gosu v1.4.6 (only tested with 1.4.6, but may work with other versions)
+- Ruby v3.2.3 (only tested with 3.2.3, but may work with newer versions)
+RubyGems:
+- Gosu v1.4.6 (only tested with 1.4.6, but may work with newer versions)
 
 ## User Manual
 Move the camera with WASD or Middle-mouse button
