@@ -2,6 +2,7 @@
 
 ## Description
 Simple circuit simulator written in Ruby. The program was made with the intention of designing circuits and combining them to eventually simulate complex machines like adders, CPUs and perhaps entire computers. 
+
 The project began the 4'th January 2019. 
 
 ## Screenshots
@@ -19,11 +20,15 @@ RubyGems:
 
 ## User Manual
 Move the camera with WASD or Middle-mouse button
+
 Zoom in/out with "Q" & "E" or Scroll wheel
+
 Select an item to place by clicking "Node", "Repeater", "Inverter", "Lever", or "LED" . Or by pressing the hotkeys 1 .. 5 on the keyboard.
+
 Nodes must be placed on the board first, then other items can be connected to this.
 
 ## Credits
 Almost all of the ruby code is written by me.
+
 TextClass.rb is a class I copied from some examples library related to Gosu. I honestly don't remember where exactly I got this from.
 
