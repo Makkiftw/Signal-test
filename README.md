@@ -1,31 +1,28 @@
-# Signal-test v 1.2 - 23 Oct 2020
+# Signal-test v 1.3 - 16 Mar 2026
 
 ## Description
 Simple circuit simulator written in Ruby. The program was made with the intention of designing circuits and combining them to eventually simulate complex machines like adders, CPUs and perhaps entire computers. 
 The project began the 4'th January 2019. 
 
-I'm taking a small break from working on this project from now. I'm lazy and got other stuff to do. Feel free to contact me if there are any issues or improvements you'd like to see. The "ToDo.txt" file includes some planned features I may add later when I feel like it.
-
-Update 23 Oct: I made some minor changes and optimised the performance. Currently the newest version is 1.2
-
 ## Screenshots
 ![screenshot _8bit_memory](https://user-images.githubusercontent.com/8478043/50781436-ab0a6600-12a5-11e9-815c-046782816b4e.PNG)
 
 ## Launch
-There is no .exe file attached yet.
+There is no .exe file attached.
 The program is launched by opening "Main.rb" with ruby.
 
 ## Requirements
-- Ruby v1.9.3 (only tested with 1.9.3, but may work with other versions)
-
+- Ruby v3.2.3 (only tested with 3.2.3, but may work with new versions)
 Ruby Gems:
-
-- Gosu v0.7.50 (only tested with 0.7.50, but may work with other versions)
-- Ashton v0.1.3 (only testen with 0.1.3, but may work with other versions)
+- Gosu v1.4.6 (only tested with 1.4.6, but may work with other versions)
 
 ## User Manual
-to be made
+Move the camera with WASD or Middle-mouse button
+Zoom in/out with "Q" & "E" or Scroll wheel
+Select an item to place by clicking "Node", "Repeater", "Inverter", "Lever", or "LED" . Or by pressing the hotkeys 1 .. 5 on the keyboard.
+Nodes must be placed on the board first, then other items can be connected to this.
 
 ## Credits
-to be made
+Almost all of the ruby code is written by me.
+TextClass.rb is a class I copied from some examples library related to Gosu. I honestly don't remember where exactly I got this from.
 
